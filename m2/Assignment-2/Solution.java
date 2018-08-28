@@ -2,10 +2,16 @@ import java.util.Scanner;
 import java.lang.Math.*;
 
 public class Solution {
+    /* 
+    *default constructor
+    */
+    private Solution() {
+
+    }
     /*
     Do not modify this main function.
     */
-    public static void main (final String[] args) {
+    public static void main(final String[] args) {
     /*
     scanner class is used to take a, b, c input
     */
@@ -19,7 +25,7 @@ public class Solution {
     Need to write the rootsOfQuadraticEquation function and
     print the output.
     */
-    static void rootsOfQuadraticEquation (final int a, final int b, final int c) {
+    static void rootsOfQuadraticEquation(final int a, final int b, final int c) {
     /*
     finding roots for equation
     */
