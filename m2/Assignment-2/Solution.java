@@ -24,8 +24,9 @@ public final class Solution {
     /**
     Need to write the rootsOfQuadraticEquation function and
     print the output.
-    @param root1 double
-    @param root2 double
+    @param a integer
+    @param b integer
+    @param c integer
     */
     static void rootsOfQuadraticEquation(final int a, final int b, final int c) {
     /*
