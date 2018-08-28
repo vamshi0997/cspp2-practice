@@ -1,6 +1,8 @@
 import java.util.Scanner;
 import java.lang.Math.*;
-
+/**
+@author vamshi
+*/
 public final class Solution {
     /**
     Do not modify this main function.
@@ -9,7 +11,6 @@ public final class Solution {
     * default constructor
     */
     private Solution() {
-
     }
     /**
     @param args string
