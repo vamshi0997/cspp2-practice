@@ -25,7 +25,7 @@ public class Solution {
     @return power()
     **/
     static long power(int base, int exponent) {
-        if (exponent == 0){
+        if (exponent == 0) {
             return 1;
         }
         else {
