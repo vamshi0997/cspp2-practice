@@ -5,7 +5,7 @@ import java.util.Scanner;
 */
 
 public final class Solution {
-    /** 
+    /**
     @default constructor
     */
     private Solution() {
