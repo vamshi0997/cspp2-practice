@@ -1,29 +1,31 @@
 import java.util.Scanner;
 //import java.lang.Math.sqrt;
+/**
+@author vamshi
+*/
 
-public class Solution {
-    /* 
-    *default constructor
+public final class Solution {
+    /** 
+    @default constructor
     */
     private Solution() {
-
     }
-    /*
+    /**
     Do not modify this main function.
+    @param args string
     */
     public static void main(final String[] args) {
-    /*
-    scanner class is used to take a, b, c input
-    */
         Scanner scan = new Scanner(System.in);
         int a = scan.nextInt();
         int b = scan.nextInt();
         int c = scan.nextInt();
         rootsOfQuadraticEquation(a, b, c);
     }
-    /*
+    /**
     Need to write the rootsOfQuadraticEquation function and
     print the output.
+    @param root1 double
+    @param root2 double
     */
     static void rootsOfQuadraticEquation(final int a, final int b, final int c) {
     /*
