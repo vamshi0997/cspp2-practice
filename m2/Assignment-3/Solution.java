@@ -11,6 +11,11 @@ public class Solution {
     private Solution() {
 
     }
+    /**
+    @param base integer
+    @param exponent integer
+    @param result long
+    */
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
         int base = s.nextInt();
