@@ -1,20 +1,18 @@
 import java.util.Scanner;
 import java.lang.Math.*;
 
-public class Solution {
+public final class Solution {
     /**
     Do not modify this main function.
     */
-    /**
+    /*
     * default constructor
     */
     private Solution() {
 
     }
     /**
-    @param base integer
-    @param exponent integer
-    @param result long
+    printing result
     */
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
