@@ -33,8 +33,8 @@ public final class Solution {
     finding roots for equation
     */
         final int t = 4;
-        double root1 = (-b + Math.sqrt(b * b - (4 * a * c))) / (2 * a);
-        double root2 = (-b - Math.sqrt(b * b - (4 * a * c))) / (2 * a);
+        double root1 = (-b + Math.sqrt(b * b - (t * a * c))) / (2 * a);
+        double root2 = (-b - Math.sqrt(b * b - (t * a * c))) / (2 * a);
         System.out.println(root1 + " " + root2);
     }
 }
