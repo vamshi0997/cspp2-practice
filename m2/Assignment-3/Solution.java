@@ -7,8 +7,8 @@ public final class Solution {
     /**
     Do not modify this main function.
     */
-    /*
-    * default constructor
+    /**
+    @default constructor
     */
     private Solution() {
     }
