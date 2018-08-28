@@ -5,7 +5,6 @@ public class Solution {
     /**
     Do not modify this main function.
     */
-
     /**
     * default constructor
     */
@@ -13,7 +12,7 @@ public class Solution {
 
     }
     public static void main(String[] args) {
-        Scanner s = new Scanner(System.in);      
+        Scanner s = new Scanner(System.in);
         int base = s.nextInt();
         int exponent = s.nextInt();
         long result = power(base, exponent);
