@@ -1,8 +1,9 @@
 import java.util.Scanner;
-/*
-	Do not modify this main function.
-	*/
-public class Solution {
+/**
+ * Do not modify this main function.
+ * @author vamshi
+ */
+public final class Solution {
     /**
      * @details default constructor.
      */
@@ -13,9 +14,9 @@ public class Solution {
      * @param args string
      */
 
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
 
-        Scanner s=new Scanner(System.in);      
+        Scanner s = new Scanner(System.in);      
         int n1 = s.nextInt();
         int n2 = s.nextInt();
         System.out.println(gcd(n1,n2));
