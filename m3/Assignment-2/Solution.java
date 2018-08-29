@@ -26,16 +26,17 @@ public final class Solution {
         System.out.println(r);
     }
     /**
-     * @param i integer
+     * @param n integer
      * @return integer
      */
     public static int count(final int n) {
         int count1 = 0, i = n;
+        final int j = 10, k = 7;
         while (i > 0) {
-            if (i % 10 == 7) {
+            if (i % j == k) {
                 count1 += 1;
             }
-            i = i / 10;
+            i = i / j;
         }
         return count1;
     }
