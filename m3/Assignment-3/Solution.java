@@ -15,17 +15,17 @@ public final class Solution {
      */
 
     public static void main(final String[] args) {
-        Scanner s = new Scanner(System.in);      
+        Scanner s = new Scanner(System.in);
         int n1 = s.nextInt();
         int n2 = s.nextInt();
-        System.out.println(gcd(n1,n2));
+        System.out.println(gcd(n1, n2));
     }
     /**
      * @param a integer
      * @param b integer
      * @return integer
      */
-    public static int gcd(final int a,final int b) {
+    public static int gcd(final int a, final int b) {
         if (a == 1 || b == 1) {
             return 1;
         } else if (a == b) {
