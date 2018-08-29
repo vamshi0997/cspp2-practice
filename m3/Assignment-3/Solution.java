@@ -15,7 +15,6 @@ public final class Solution {
      */
 
     public static void main(final String[] args) {
-
         Scanner s = new Scanner(System.in);      
         int n1 = s.nextInt();
         int n2 = s.nextInt();
@@ -28,10 +27,15 @@ public final class Solution {
      * @return integer.
      */
     public static int gcd(int a, int b) {
-        if (a == 1 || b == 1) return 1;
-        else if (a == b) return a;
-        else if (a > b) return gcd(a - b, b);
-        else if (a < b) return gcd(b - a, a);
+        if (a == 1 || b == 1) {
+            return 1;
+        } else if (a == b) {
+            return a;
+          } else if (a > b) {
+               return gcd(a - b, b);
+            } else if (a < b) {
+               return gcd(b - a, a);
+              }
         return 0;
     }
 }
