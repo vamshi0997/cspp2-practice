@@ -11,7 +11,11 @@ public final class Solution {
     private Solution() {
 
     }
-/* Fill the main function to print the number of 7's between 1 to n*/
+    /* Fill the main function to print the number of 7's between 1 to n*/
+    /**
+     * @param args integer.
+     */
+
     public static void main(final String[] args) {
 
         Scanner s = new Scanner(System.in);      
