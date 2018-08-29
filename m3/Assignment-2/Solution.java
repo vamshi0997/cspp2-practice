@@ -17,8 +17,7 @@ public final class Solution {
      */
 
     public static void main(final String[] args) {
-
-        Scanner s = new Scanner(System.in);      
+        Scanner s = new Scanner(System.in);
         int n = s.nextInt();
         int r = 0;
         for (int i = 1; i < n; i++) {
@@ -30,8 +29,8 @@ public final class Solution {
      * @param i integer
      * @return integer
      */
-    public static int count(int i) {
-        int count1 = 0;
+    public static int count(final int n) {
+        int count1 = 0, i = n;
         while (i > 0) {
             if (i % 10 == 7) {
                 count1 += 1;
