@@ -23,10 +23,9 @@ public final class Solution {
     /**
      * @param a integer
      * @param b integer
-     * 
-     * @return integer.
+     * @return integer
      */
-    public static int gcd(int a, int b) {
+    public static int gcd(final int a,final int b) {
         if (a == 1 || b == 1) {
             return 1;
         } else if (a == b) {
