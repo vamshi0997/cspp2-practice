@@ -8,19 +8,20 @@ public class Solution {
 
         Scanner s=new Scanner(System.in);      
         int n = s.nextInt();
+        int r = 0;
         for (int i = 1; i < n; i++){
-        	n += count(i);
+        	r += count(i);
         	}
-        System.out.println(n);
+        System.out.println(r);
     }
     public static int count(int i){
     	int count1 = 0;
     	while (i > 0){
-        		if (i%10 == 7){
-        			count1 += 1;
-        		}
-        		i = i / 10;
-        		}
+        	if (i % 10 == 7){
+        		count1 += 1;
+        	}
+        	i = i / 10;
+        }
         return count1;
     }
 }
