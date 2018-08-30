@@ -4,7 +4,7 @@ import java.util.Scanner;
  */
 public final class Solution {
     /**
-     * Fill the main function to print resultant of addition of matrices
+     * Fill the main function to print resultant of addition of matrices.
      * @default constructor
      */
     private Solution() {
@@ -35,7 +35,7 @@ public final class Solution {
 
         int[][] arr = new int[rows1][columns1];
         if (rows1 == rows2 && columns1 == columns2) {
-            for(int i = 0; i < rows1; i++) {
+            for (int i = 0; i < rows1; i++) {
                 for (int j = 0; j < columns1; j++) {
                     arr[i][j] = matrix1[i][j] + matrix2[i][j];
                 }
