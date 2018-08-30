@@ -17,21 +17,12 @@ public final class Solution {
         Scanner sc = new Scanner(System.in);
         int rows1 = sc.nextInt();
         int columns1 = sc.nextInt();
-        int[][] matrix1 = new int[rows1][columns1];
-        for (int i = 0; i < rows1; i++) {
-            for (int j = 0; j < columns1; j++) {
-                matrix1[i][j] = sc.nextInt();
-            }
-        }
+        int[][] matrix1 = matrix_(rows1, columns1);
 
         int rows2 = sc.nextInt();
         int columns2 = sc.nextInt();
-        int[][] matrix2 = new int[rows2][columns2];
-        for (int i = 0; i < rows2; i++) {
-            for (int j = 0; j < columns2; j++) {
-                matrix2[i][j] = sc.nextInt();
-            }
-        }
+        int[][] matrix2 = matrix_(rows2, columns2);
+        
 
         int[][] arr = new int[rows1][columns1];
         if (rows1 == rows2 && columns1 == columns2) {
@@ -44,5 +35,15 @@ public final class Solution {
         } else {
                 System.out.println("not possible");
           }
+    }
+    public static int[][] matrix_(int rows, int columns){
+        Scanner s = new Scanner(System.in);
+        int[][] matrix1 = new int[rows][columns];
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < columns; j++) {
+                matrix1[i][j] = s.nextInt();
+            }
+        }
+        return matrix1;
     }
 }
