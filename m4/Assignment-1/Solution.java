@@ -1,20 +1,31 @@
-
 import java.util.*;
-public class Solution {
-    /*
-	Fill this main function to print maximum of given array
-	*/
-	public static void main(String[] args)
-	{
+/** 
+ * @details program to find the largest number in array.
+ * @author vamshi
+ */
+public final class Solution {
+	/**
+	 * @brief creating default constructor for class
+	 * @default constructor
+	 */
+	private Solution() {
+
+	}
+    /**
+     * @details Fill this main function to print maximum of given array
+     * @param args string
+     */
+
+	public static void main(final String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int n= sc.nextInt();
 		int[] arr = new int[n];
-		for (int i = 0; i < n; i++){
+		for (int i = 0; i < n; i++) {
 		    arr[i] = sc.nextInt();	
 		}
 		int max = 0;
-	    for (int j = 0; j < arr.length; j++){
-	    	if (arr[j] > max){
+	    for (int j = 0; j < arr.length; j++) {
+	    	if (arr[j] > max) {
 	    		max = arr[j];
 	    	}
 	    }
