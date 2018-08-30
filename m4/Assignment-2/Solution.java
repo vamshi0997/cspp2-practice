@@ -36,7 +36,7 @@ public final class Solution {
                 System.out.println("not possible");
           }
     }
-    public static int[][] matrix_(int rows, int columns){
+    static int[][] matrix_(int rows, int columns){
         Scanner s = new Scanner(System.in);
         int[][] matrix1 = new int[rows][columns];
         for (int i = 0; i < rows; i++) {
