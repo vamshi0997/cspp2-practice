@@ -17,9 +17,9 @@ public final class Solution {
 
     public static void main(final String[] args) {
         Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
-        int[] arr = new int[n];
-        for (int i = 0; i < n; i++) {
+        int number = sc.nextInt();
+        int[] arr = new int[number];
+        for (int i = 0; i < number; i++) {
             arr[i] = sc.nextInt();
         }
         int max = 0;
