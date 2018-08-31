@@ -19,7 +19,7 @@ public final class Solution {
         int first = scan.nextInt();
         int second = scan.nextInt();
         int third = scan.nextInt();
-        Quadratic(first, second, third);
+        quadratic(first, second, third);
     }
     /**
     Need to write the rootsOfQuadraticEquation function and
@@ -28,7 +28,7 @@ public final class Solution {
     @param second integer
     @param third integer
     */
-    static void Quadratic(final int first, final int second, final int third) {
+    static void quadratic(final int first, final int second, final int third) {
     /*
     finding roots for equation
     */
