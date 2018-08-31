@@ -1,37 +1,48 @@
 
 // Given an String, Write a java method that returns the decimal value for the given binary string.
-
-
 import java.util.Scanner;
 import java.lang.Math.*;
-public class Solution
+public final class Solution
 {/*
-	Do not modify this main function.
-	*/
-	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
-		String l = sc.nextLine();
-        int n = Integer.parseInt(l);
-		for(int i=0; i<=n-1; i++) {
-		    String s = sc.nextLine();
-			String res = binaryToDecimal(s);//Write binaryToDecimal function
-			System.out.println(res);
-		}
-	}
+  Do not modify this main function.
+  */
+  /**
+   * @default constructor.
+   */
+  private Solution() {
 
-	static String binaryToDecimal(String s) {
-        Long n = Long.parseLong(s);
+  }
+  /**
+   * intializing main method.
+   * @param args string
+   */
+    public static void main(final String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String temp = sc.nextLine();
+        int number = Integer.parseInt(temp);
+        for(int i=0; i<=number-1; i++) {
+            String str = sc.nextLine();
+            String res = binaryToDecimal(str);
+            System.out.println(res);
+        }
+    }
+    /**
+     * @param str string
+     * @return string
+     */
+    static String binaryToDecimal(String str) {
+        Long number = Long.parseLong(str);
         double sum = 0;
         int count1 = 0;
-        while (n > 0) {
-        	if (n%10 == 1){
-        		sum = sum + Math.pow(2, count1);
-        	}
-        	n = n/10;
-        	count1 += 1;
+        while (number > 0) {
+            if (number%10 == 1) {
+                sum = sum + Math.pow(2, count1);
+            }
+            number = number/10;
+            count1 += 1;
         }
         String sum1 = Integer.toString((int)sum);
         return sum1;
-	}
+    }
 
 }
