@@ -17,26 +17,26 @@ public final class Solution {
      */
 
     public static void main(final String[] args) {
-        Scanner s = new Scanner(System.in);
-        int n = s.nextInt();
-        int r = 0;
-        for (int i = 1; i < n; i++) {
-            r += count(i);
+        Scanner scan = new Scanner(System.in);
+        int number = scan.nextInt();
+        int result = 0;
+        for (int i = 1; i < number; i++) {
+            result += count(i);
             }
-        System.out.println(r);
+        System.out.println(result);
     }
     /**
-     * @param n integer
+     * @param number integer
      * @return integer
      */
-    public static int count(final int n) {
-        int count1 = 0, i = n;
-        final int j = 10, k = 7;
-        while (i > 0) {
-            if (i % j == k) {
+    public static int count(final int number) {
+        int count1 = 0, num1 = number;
+        final int num2 = 10, num3 = 7;
+        while (num1 > 0) {
+            if (num1 % num2 == num3) {
                 count1 += 1;
             }
-            i = i / j;
+            num1 = num1 / num2;
         }
         return count1;
     }
