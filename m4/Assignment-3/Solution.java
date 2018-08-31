@@ -20,7 +20,7 @@ public class Solution
 	}
 
 	static String binaryToDecimal(String s) {
-        int n = Integer.parseInt(s);
+        Long n = Long.parseLong(s);
         double sum = 0;
         int count1 = 0;
         while (n > 0) {
