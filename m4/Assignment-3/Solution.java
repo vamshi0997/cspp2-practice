@@ -4,10 +4,7 @@ Write a java method that returns the decimal value for the given binary string.*
 
 import java.util.Scanner;
 import java.lang.Math.*;
-public final class Solution
-{/*
-  Do not modify this main function.
-  */
+public final class Solution {
   /**
    * @default constructor.
    */
@@ -22,7 +19,7 @@ public final class Solution
         Scanner sc = new Scanner(System.in);
         String temp = sc.nextLine();
         int number = Integer.parseInt(temp);
-        for(int i = 0; i <= number - 1; i++) {
+        for (int i = 0; i <= number - 1; i++) {
             String str = sc.nextLine();
             String res = binaryToDecimal(str);
             System.out.println(res);
@@ -32,7 +29,7 @@ public final class Solution
      * @param str string
      * @return string
      */
-    static String binaryToDecimal(String str) {
+    static String binaryToDecimal(final String str) {
         Long number = Long.parseLong(str);
         final int num1 = 10;
         double sum = 0;
@@ -44,7 +41,7 @@ public final class Solution
             number = number / num1;
             count1 += 1;
         }
-        String sum1 = Integer.toString ((int)sum);
+        String sum1 = Integer.toString((int) sum);
         return sum1;
     }
 
