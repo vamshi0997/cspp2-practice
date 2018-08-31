@@ -3,7 +3,10 @@
 Write a java method that returns the decimal value for the given binary string.*/
 
 import java.util.Scanner;
-import java.lang.Math.*;
+//import java.lang.Math.*;
+/**
+ * @author vamshi
+ */
 public final class Solution {
   /**
    * @default constructor.
