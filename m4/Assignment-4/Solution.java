@@ -15,7 +15,6 @@ public final class Solution {
 
     }
     /**
-     * reading input in main function
      * @param args string
      */
     public static void main(final String[] args) {
