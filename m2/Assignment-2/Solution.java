@@ -19,7 +19,7 @@ public final class Solution {
         int first = scan.nextInt();
         int second = scan.nextInt();
         int third = scan.nextInt();
-        rootsOfQuadratic(first, second, third);
+        Quadratic(first, second, third);
     }
     /**
     Need to write the rootsOfQuadraticEquation function and
@@ -28,15 +28,15 @@ public final class Solution {
     @param second integer
     @param third integer
     */
-    static void rootsOfQuadratic(final int first, final int second, final int third) {
+    static void Quadratic(final int first, final int second, final int third) {
     /*
     finding roots for equation
     */
-        final int temp = 4;
-        double root1 = (-second + Math.sqrt(second * second 
-                        - (temp * first * third))) / (2 * first);
-        double root2 = (-second - Math.sqrt(second * second 
-                       - (temp * first * third))) / (2 * first);
+    final int temp = 4;
+    double root1 = (-second + Math.sqrt(second * second
+                    - (temp * first * third))) / (2 * first);
+    double root2 = (-second - Math.sqrt(second * second
+                    - (temp * first * third))) / (2 * first);
         System.out.println(root1 + " " + root2);
     }
 }
