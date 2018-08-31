@@ -30,7 +30,7 @@ public class Solution
         	n = n/10;
         	count1 += 1;
         }
-        String sum1 = Double.toString((int)sum);
+        String sum1 = Integer.toString((int)sum);
         return sum1;
 	}
 
