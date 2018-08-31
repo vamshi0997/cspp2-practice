@@ -33,8 +33,10 @@ public final class Solution {
     finding roots for equation
     */
         final int temp = 4;
-        double root1 = (-second + Math.sqrt(second * second - (temp * first * third))) / (2 * first);
-        double root2 = (-second - Math.sqrt(second * second - (temp * first * third))) / (2 * first);
+        double root1 = (-second + Math.sqrt
+                       (second * second - (temp * first * third))) / (2 * first);
+        double root2 = (-second - Math.sqrt
+                       (second * second - (temp * first * third))) / (2 * first);
         System.out.println(root1 + " " + root2);
     }
 }
