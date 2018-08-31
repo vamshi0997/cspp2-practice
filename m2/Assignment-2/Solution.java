@@ -16,25 +16,25 @@ public final class Solution {
     */
     public static void main(final String[] args) {
         Scanner scan = new Scanner(System.in);
-        int a = scan.nextInt();
-        int b = scan.nextInt();
-        int c = scan.nextInt();
-        rootsOfQuadratic(a, b, c);
+        int first = scan.nextInt();
+        int second = scan.nextInt();
+        int third = scan.nextInt();
+        rootsOfQuadratic(first, second, third);
     }
     /**
     Need to write the rootsOfQuadraticEquation function and
     print the output.
-    @param a integer
-    @param b integer
-    @param c integer
+    @param first integer
+    @param second integer
+    @param third integer
     */
-    static void rootsOfQuadratic(final int a, final int b, final int c) {
+    static void rootsOfQuadratic(final int first, final int second, final int third) {
     /*
     finding roots for equation
     */
-        final int t = 4;
-        double root1 = (-b + Math.sqrt(b * b - (t * a * c))) / (2 * a);
-        double root2 = (-b - Math.sqrt(b * b - (t * a * c))) / (2 * a);
+        final int temp = 4;
+        double root1 = (-second + Math.sqrt(second * second - (temp * first * third))) / (2 * first);
+        double root2 = (-second - Math.sqrt(second * second - (temp * first * third))) / (2 * first);
         System.out.println(root1 + " " + root2);
     }
 }
