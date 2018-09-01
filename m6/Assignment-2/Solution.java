@@ -41,36 +41,36 @@ final class Solution {
                     d1 = 400 - a[i][j];
                     d2 = a[i][j] - 300;
                     if (d1 >= d2){
-                        a[i][j] = 400;
-                    } else {
                         a[i][j] = 300;
+                    } else {
+                        a[i][j] = 400;
                     }
                 }
                 else if (a[i][j] > 200) {
                     d1 = 300 - a[i][j];
                     d2 = a[i][j] - 200;
                     if (d1 >= d2){
-                        a[i][j] = 300;
-                    } else {
                         a[i][j] = 200;
+                    } else {
+                        a[i][j] = 300;
                     }
                 }
                 else if (a[i][j] > 100) {
                     d1 = 200 - a[i][j];
                     d2 = a[i][j] - 100;
                     if (d1 >= d2){
-                        a[i][j] = 200;
-                    } else {
                         a[i][j] = 100;
+                    } else {
+                        a[i][j] = 200;
                     }
                 }
                 else {
                     d1 = 100 - a[i][j];
                     d2 = a[i][j];
                     if (d1 >= d2){
-                        a[i][j] = 100;
-                    } else {
                         a[i][j] = 0;
+                    } else {
+                        a[i][j] = 100;
                     }
                 }
 	        }
