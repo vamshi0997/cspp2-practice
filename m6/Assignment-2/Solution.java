@@ -32,9 +32,9 @@ final class Solution {
                     d1 = 500 - a[i][j];
                     d2 = a[i][j] - 400;
                     if (d1 >= d2){
-                        a[i][j] = 500;
-                    } else {
                         a[i][j] = 400;
+                    } else {
+                        a[i][j] = 500;
                     }
                 }
                 else if (a[i][j] > 300) {
