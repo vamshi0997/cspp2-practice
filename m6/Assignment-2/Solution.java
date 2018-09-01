@@ -25,7 +25,7 @@ final class Solution {
     static int[][] roundHundred(final int[][] a, final int rows, final int columns) {
 
 	// write ypur code here
-        int d1 = 0, d2 =0;
+        int d1 = 0, d2 = 0;
         final int hun5 = 500,hun4 = 400, hun3 = 300, hun2 = 200, hun1 = 100;
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < columns; j++) {
@@ -37,8 +37,7 @@ final class Solution {
                     } else {
                         a[i][j] = hun5;
                     }
-                }
-                else if (a[i][j] > hun3) {
+                } else if (a[i][j] > hun3) {
                     d1 = hun4 - a[i][j];
                     d2 = a[i][j] - hun3;
                     if (d1 >= d2){
@@ -46,8 +45,7 @@ final class Solution {
                     } else {
                         a[i][j] = hun4;
                     }
-                }
-                else if (a[i][j] > hun2) {
+                } else if (a[i][j] > hun2) {
                     d1 = hun3 - a[i][j];
                     d2 = a[i][j] - hun2;
                     if (d1 >= d2){
@@ -55,8 +53,7 @@ final class Solution {
                     } else {
                         a[i][j] = hun3;
                     }
-                }
-                else if (a[i][j] > hun1) {
+                } else if (a[i][j] > hun1) {
                     d1 = hun2 - a[i][j];
                     d2 = a[i][j] - hun1;
                     if (d1 >= d2){
@@ -64,8 +61,7 @@ final class Solution {
                     } else {
                         a[i][j] = hun2;
                     }
-                }
-                else {
+                } else {
                     d1 = hun1 - a[i][j];
                     d2 = a[i][j];
                     if (d1 >= d2){
