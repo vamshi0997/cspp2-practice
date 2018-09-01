@@ -14,8 +14,7 @@ public final class Solution {
     }
     /**
      * Prints the odd composite numbers between 2 and n.
-     *
-     * @param num integer  
+     * @param num integer
      */
     static void oddComposites(final int num) {
     // write your code here
