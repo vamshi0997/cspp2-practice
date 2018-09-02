@@ -26,9 +26,10 @@ final class Solution {
         final int rows, final int columns) {
 
     // write ypur code here
+        final int num1 = 50, num2 = 100;
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < columns; j++) {
-                a[i][j] = ((a[i][j] + 50) / 100) * 100;
+                a[i][j] = ((a[i][j] + num1) / num2) * num2;
                 }
             }
         return a;
