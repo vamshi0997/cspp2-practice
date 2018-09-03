@@ -5,12 +5,12 @@ import java.util.Scanner;
  */
 class InputValidator {
     /*Write the atrributes and methods for InputValidator*/
-    private String str1;
-    private int six = 6;
+    String str1;
+    int six = 6;
     /**
      * @param str string
      */
-    public InputValidator(String str) {
+    InputValidator(final String str) {
         str1 = str;
     }
     /**
