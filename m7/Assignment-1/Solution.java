@@ -6,8 +6,9 @@ import java.util.Scanner;
 class InputValidator {
     /*Write the atrributes and methods for InputValidator*/
     String str1;
-    int six = 6;
+    final int six = 6;
     /**
+     * @breif constructor.
      * @param str string
      */
     InputValidator(final String str) {
