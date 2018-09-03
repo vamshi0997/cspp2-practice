@@ -1,16 +1,16 @@
-import java.util.*;
-import java.lang.*;
+import java.util.Scanner;
+//import java.lang.*;
 /**
  * @author vamshi
  */
 class InputValidator {
     /*Write the atrributes and methods for InputValidator*/
-    String str1;
+    private String str1;
     final int six = 6;
     /**
      * @param str string
      */
-    public InputValidator(String str){
+    public InputValidator(String str) {
         str1 = str;
     }
     /**
