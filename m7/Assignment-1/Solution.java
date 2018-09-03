@@ -5,7 +5,6 @@ import java.util.Scanner;
  */
 class InputValidator {
     String str1;
-    final int six = 6;
     /**
      * @breif constructor.
      * @param str string
@@ -17,6 +16,7 @@ class InputValidator {
      * @return boolean
      */
     public boolean validateData() {
+        final int six = 6;
         if (str1.length() >= six) {
             return true;
         } else {
