@@ -5,7 +5,7 @@ import java.util.Scanner;
  */
 class InputValidator {
     /**
-     * @param str1 String 
+     * @param str1 String
      */
     private String str1;
     /**
