@@ -6,7 +6,6 @@ import java.lang.*;
 class InputValidator {
     /*Write the atrributes and methods for InputValidator*/
     String str1;
-    int length = str1.length();
     final int six = 6;
     /**
      * @param str string
@@ -18,7 +17,7 @@ class InputValidator {
      * @return boolean
      */
     public boolean validateData() {
-        if (length >= six) {
+        if (str1.length() >= six) {
             return true;
         } else {
             return false;
