@@ -4,7 +4,10 @@ import java.util.Scanner;
  * @author vamshi
  */
 class InputValidator {
-    String str1;
+    /**
+     * @param str1 String 
+     */
+    private String str1;
     /**
      * @breif constructor.
      * @param str string
