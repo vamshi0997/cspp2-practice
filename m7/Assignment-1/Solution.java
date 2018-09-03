@@ -1,28 +1,50 @@
 import java.util.*;
 import java.lang.*;
-
-class InputValidator
-{
-	/*Write the atrributes and methods for InputValidator*/
-	String str1;
+/**
+ * @details To find string length is greater than 6.
+ * @author vamshi
+ */
+class InputValidator {
+    /*Write the atrributes and methods for InputValidator*/
+    String str1;
+    final int six = 6;
+    /**
+     * @param str string
+     */
     public InputValidator(String str){
         str1 = str;
     }
-	public boolean validateData() {
-		if (str1.length() >= 6) {
-			return true;
-		} else {
-			return false;
-		}
+    /**
+     * @return boolean
+     */
+    public boolean validateData() {
+        if (str1.length() >= six) {
+            return true;
+        } else {
+            return false;
+        }
 
-	}
+    }
 }
-public class Solution {
-	public static void main(String args[]) {
-    	Scanner s = new Scanner(System.in);
-    	String input = s.next();
-    	InputValidator i = new InputValidator(input);    	
-    	System.out.println(i.validateData());
+/**
+ * main class.
+ */
+public final class Solution {
+    /**
+     * @default constructor
+     */
+    private Solution() {
+
+    }
+    /**
+     * In main method.
+     * @param args string
+     */
+    public static void main(final String args[]) {
+        Scanner s = new Scanner(System.in);
+        String input = s.next();
+        InputValidator i = new InputValidator(input);       
+        System.out.println(i.validateData());
 
     }
 
