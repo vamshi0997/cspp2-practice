@@ -19,9 +19,8 @@ class InputValidator {
         final int six = 6;
         if (str1.length() >= six) {
             return true;
-        } else {
-            return false;
         }
+        return false;
 
     }
 }
