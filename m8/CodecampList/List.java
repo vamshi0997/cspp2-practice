@@ -141,6 +141,9 @@ public class List {
                 }
                 break;
             }
+            else {
+                System.out.println("Invalid Position Exception");
+            }
         }
         size = size - 1;
     }
