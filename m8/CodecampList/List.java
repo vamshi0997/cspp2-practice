@@ -88,10 +88,8 @@ public final class List {
         // That is the initial value to use for size.
         array = new int[10];
         size = 0;
-
-
     }
-    
+
     /*
      * The add method does what the name suggests.
      * Add an int item to the list.
@@ -100,7 +98,6 @@ public final class List {
      * Is it the same as the end of the array?
      * Think about how you can use the size variable to add item
      * to the list.
-     * 
      * The method returns void (nothing)
      */
     /**
@@ -108,7 +105,7 @@ public final class List {
      */
     public void add(final int item) {
         //Inserts the specified element at the end of the list.
-        for (int i = size; i <= size; i++){
+        for (int i = size; i <= size; i++) {
             array[size] = item;
         }
         size += 1;
@@ -203,7 +200,6 @@ public final class List {
      * System.out.println(l);
      * This statement is a shortcut for
      * System.out.println(l.toString());
-     * 
      * So, implement the toString method to display the items
      * in the list in the square brackets notation.
      * i.e., if the list has numbers 1, 2, 3
@@ -216,7 +212,7 @@ public final class List {
      */
     public String toString() {
         // Replace the code below
-        int[] arr = new int[size]; 
+        int[] arr = new int[size];
         for (int i = 0; i < size; i++) {
             arr[i] = array[i];
         }
@@ -224,7 +220,7 @@ public final class List {
     }
 
     /**
-     * Contains return true if the list has
+     * Contains return true if the list has.
      * the item passed as an argument to the method
      * So, iterate through the list and return true if
      * the item exists and otherwise false
