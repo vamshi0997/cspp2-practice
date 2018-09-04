@@ -267,12 +267,14 @@ public class List {
                 break;
                 case "get":
                 int temp = l.get(Integer.parseInt(tokens[1]));
-                if (temp != -1){
+                if (temp != -1) {
                 System.out.println(temp);
                 }
                 break;
                 case "contains":
                 System.out.println(l.contains(Integer.parseInt(tokens[1])));
+                break;
+                default:
                 break;
             }
         }
