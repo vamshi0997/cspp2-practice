@@ -188,7 +188,11 @@ public class List {
      */
     public String toString() {
         // Replace the code below
-        return Arrays.toString(array);
+        int[] arr = new int[size]; 
+        for (int i = 0; i < size; i++) {
+            arr[i] = array[i];
+        }
+        return Arrays.toString(arr).replace(" ", "");
     } 
     
     /*
