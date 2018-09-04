@@ -91,7 +91,7 @@ public final class List {
      * 
      * The method returns void (nothing)
      */
-    public void add(int item) {
+    public void add(final int item) {
         //Inserts the specified element at the end of the list.
         for (int i = size; i <= size; i++){
             array[size] = item;
@@ -131,13 +131,13 @@ public final class List {
      * array = [1,3,0,0,0,0,0,0,0,0]
      * The method returns void (nothing)
      */
-   public void remove(int index) {
+   public void remove(final int index) {
         // write the logic for remove here.
         // Think about what to do to the size variable.
         if (index < size) {
             for (int i = 0; i <= size; i++) {
-                if(i == index) {
-                    for(int j = i; j < array.length - 1; j++) {
+                if (i == index) {
+                    for (int j = i; j < array.length - 1; j++) {
                         array[j] = array[j + 1];
                     }
                     break;
@@ -160,7 +160,7 @@ public final class List {
      * How do we check if the position is greater than the 
      * number of items in the list? Would size variable be useful?
      */
-    public int get(int index) {
+    public int get(final int index) {
         // Replace the code below to write the code for get
         for (int i = 0; i < size; i++) {
             if (i == index) {
@@ -205,22 +205,24 @@ public final class List {
      * So, iterate through the list and return true if
      * the item exists and otherwise false
      */
-    public boolean contains(int item) {
+    public boolean contains(final int item) {
         // Replace the code below
         for (int i = 0; i < array.length; i++) {
-            if (array[i] == item){
+            if (array[i] == item) {
                 return true;
             }
         }
     return false;
     }
 
-    /*
-     * Returns the index of the first occurrence 
+    /**
+     * Returns the index of the first occurrence
      * of the specified element in this list,
      * or -1 if this list does not contain the element.
+     * @param item final
+     * @return int
      */
-    public int indexOf(int item) {
+    public int indexOf(final int item) {
         // Replace the code below
         for (int i = 0; i < array.length; i++) {
             if (array[i] == item) {
