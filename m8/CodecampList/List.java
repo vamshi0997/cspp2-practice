@@ -1,13 +1,13 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
 import java.util.Arrays;
-import java.util.ArrayList;
+//import java.util.ArrayList;
 
 /**
  * @author vamshi
  */
 public final class List {
-	//Implement all the methods mentioned to build a ListADT
+    //Implement all the methods mentioned to build a ListADT
 
     /*
      * The goal for the list is to store items.
@@ -84,7 +84,8 @@ public final class List {
         // How many items do we have in the list when you create it?
         // An empty list has how many items?
         // That is the initial value to use for size.
-        array = new int[10];
+        final int num = 10;
+        array = new int[num];
         size = 0;
     }
 
@@ -256,7 +257,7 @@ public final class List {
      * main class.
      * @param args string
      */
-	public static void main(final String[] args) {
+    public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
         List l = new List();
 
@@ -304,5 +305,5 @@ public final class List {
                 break;
             }
         }
-	}
+    }
 }
