@@ -3,6 +3,9 @@ import java.util.Scanner;
 import java.util.Arrays;
 import java.util.ArrayList;
 
+/**
+ * @author vamshi
+ */
 public final class List {
 	//Implement all the methods mentioned to build a ListADT
 
@@ -31,6 +34,9 @@ public final class List {
     // declare a private int[]
     // don't create the array yet using new
     // that's the job of the List constructor
+    /**
+     * @class attribute.
+     */
     private int[] array;
 
     /*
@@ -56,12 +62,18 @@ public final class List {
     // declare a private int size
     // again, don't initialize it here
     // variable initialization should be done in the constructor
+    /**
+     * @ class attribute.
+     */
     private int size;
 
     /*
      * The purpose of the constructor is to initialize the
      * class variables with some default values.
      */
+     /**
+      * @default constructor.
+      */
     public List() {
 
         // what are the two variables to be initialized here?
@@ -91,6 +103,9 @@ public final class List {
      * 
      * The method returns void (nothing)
      */
+    /**
+     * @param item integer.
+     */
     public void add(final int item) {
         //Inserts the specified element at the end of the list.
         for (int i = size; i <= size; i++){
@@ -105,6 +120,9 @@ public final class List {
      * to the objects outside the list
      * 
      * The method returns an int. Empty list should return 0.
+     */
+    /**
+     * @return integer.
      */
     public int size() {
         // replace the code below to implement the size method
@@ -130,6 +148,9 @@ public final class List {
      * So, the new array looks like this.
      * array = [1,3,0,0,0,0,0,0,0,0]
      * The method returns void (nothing)
+     */
+    /**
+     * @param index int
      */
    public void remove(final int index) {
         // write the logic for remove here.
@@ -160,6 +181,10 @@ public final class List {
      * How do we check if the position is greater than the 
      * number of items in the list? Would size variable be useful?
      */
+    /**
+     * @param index integer
+     * @return integer
+     */
     public int get(final int index) {
         // Replace the code below to write the code for get
         for (int i = 0; i < size; i++) {
@@ -170,7 +195,8 @@ public final class List {
     return -1;
     }
 
-    /*
+    
+    /**
      * What happens when you print an object using println?
      * Java provides a method named toString that is internally
      * invoked when an object variable is used in println.
@@ -188,7 +214,7 @@ public final class List {
      * Example: [1,2,3,0,0,0,0,0,0,0]
      * toString should only return the items in the list and
      * not all the elements of the array.
-     *
+     * @return string
      */
     public String toString() {
         // Replace the code below
@@ -197,13 +223,15 @@ public final class List {
             arr[i] = array[i];
         }
         return Arrays.toString(arr).replace(" ", "");
-    } 
-    
-    /*
+    }
+
+    /**
      * Contains return true if the list has
      * the item passed as an argument to the method
      * So, iterate through the list and return true if
      * the item exists and otherwise false
+     * @param item integer
+     * @return boolean
      */
     public boolean contains(final int item) {
         // Replace the code below
