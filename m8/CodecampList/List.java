@@ -3,7 +3,7 @@ import java.util.Scanner;
 import java.util.Arrays;
 import java.util.ArrayList;
 
-public class List {
+public final class List {
 	//Implement all the methods mentioned to build a ListADT
 
     /*
@@ -135,9 +135,9 @@ public class List {
         // write the logic for remove here.
         // Think about what to do to the size variable.
         if (index < size) {
-            for(int i = 0; i <= size; i++){
+            for (int i = 0; i <= size; i++) {
                 if(i == index) {
-                    for(int j = i; j < array.length - 1; j++){
+                    for(int j = i; j < array.length - 1; j++) {
                         array[j] = array[j + 1];
                     }
                     break;
@@ -162,8 +162,8 @@ public class List {
      */
     public int get(int index) {
         // Replace the code below to write the code for get
-        for(int i = 0; i < size; i++) {
-            if(i == index) {
+        for (int i = 0; i < size; i++) {
+            if (i == index) {
                 return array[i];
             }
         }
@@ -207,8 +207,8 @@ public class List {
      */
     public boolean contains(int item) {
         // Replace the code below
-        for(int i = 0; i < array.length; i++){
-            if(array[i] == item){
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] == item){
                 return true;
             }
         }
@@ -222,15 +222,19 @@ public class List {
      */
     public int indexOf(int item) {
         // Replace the code below
-        for(int i = 0; i < array.length; i++) {
-            if(array[i] == item){
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] == item) {
                 return i;
             }
         }
     return -1;
     }
 
-	public static void main(String[] args) {
+    /**
+     * main class.
+     * @param args string
+     */
+	public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
         List l = new List();
 
