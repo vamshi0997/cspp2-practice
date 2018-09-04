@@ -137,7 +137,7 @@ public class List {
         for(int i = 0; i <= size; i++){
             if(i == index) {
                 for(int j = i; j < array.length - 1; j++){
-                    array[j] = array[j+1];
+                    array[j] = array[j + 1];
                 }
                 break;
             }
@@ -218,7 +218,7 @@ public class List {
      */
     public int indexOf(int item) {
         // Replace the code below
-        for(int i = 0; i < array.length; i++){
+        for(int i = 0; i < array.length; i++) {
             if(array[i] == item){
                 return i;
             }
