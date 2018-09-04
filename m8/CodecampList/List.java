@@ -1,5 +1,7 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
+import java.util.Arrays;
+import java.util.ArrayList;
 
 public class List {
 	//Implement all the methods mentioned to build a ListADT
@@ -29,6 +31,7 @@ public class List {
     // declare a private int[]
     // don't create the array yet using new
     // that's the job of the List constructor
+    private int[] array;
 
     /*
      * What are the other class variables needed for creating a list?
@@ -53,6 +56,7 @@ public class List {
     // declare a private int size
     // again, don't initialize it here
     // variable initialization should be done in the constructor
+    private int size;
 
     /*
      * The purpose of the constructor is to initialize the
@@ -70,6 +74,9 @@ public class List {
         // How many items do we have in the list when you create it?
         // An empty list has how many items?
         // That is the initial value to use for size.
+        array = new int[10];
+        size = 0;
+
 
     }
     
@@ -86,6 +93,10 @@ public class List {
      */
     public void add(int item) {
         //Inserts the specified element at the end of the list.
+        for (int i = size; i <= size; i++){
+            array[size] = item;
+        }
+        size += 1;
     }
 
     /*
@@ -97,7 +108,7 @@ public class List {
      */
     public int size() {
         // replace the code below to implement the size method
-        return -1;
+        return size;
     }
 
     /*
@@ -112,7 +123,7 @@ public class List {
      * moved to the left by one position.
      * Here is an example:
      * array = [1,2,3,0,0,0,0,0,0,0]
-     * remove(1) would remove the item 2 which is at index position 1.
+     * remove(2) would remove the item 2
      * But how do you remove the item from an array?
      * Well, the way to remove it is to move all
      * the items, that are to the right of the removed item, to the left
@@ -120,9 +131,18 @@ public class List {
      * array = [1,3,0,0,0,0,0,0,0,0]
      * The method returns void (nothing)
      */
-    public void remove(int index) {
+   public void remove(int index) {
         // write the logic for remove here.
         // Think about what to do to the size variable.
+        for(int i = 0; i <= size; i++){
+            if(i == index) {
+                for(int j = i; j < array.length - 1; j++){
+                    array[j] = array[j+1];
+                }
+                break;
+            }
+        }
+        size = size - 1;
     }
 
     /*
@@ -138,7 +158,12 @@ public class List {
      */
     public int get(int index) {
         // Replace the code below to write the code for get
-        return -1;
+        for(int i = 0; i < size; i++) {
+            if(i == index) {
+                return array[i];
+            }
+        }
+    return -1;
     }
 
     /*
@@ -163,7 +188,7 @@ public class List {
      */
     public String toString() {
         // Replace the code below
-        return "print the list";
+        return Arrays.toString(array);
     } 
     
     /*
@@ -174,7 +199,12 @@ public class List {
      */
     public boolean contains(int item) {
         // Replace the code below
-        return true;
+        for(int i = 0; i < array.length; i++){
+            if(array[i] == item){
+                return true;
+            }
+        }
+    return false;
     }
 
     /*
@@ -184,7 +214,12 @@ public class List {
      */
     public int indexOf(int item) {
         // Replace the code below
-        return -1;
+        for(int i = 0; i < array.length; i++){
+            if(array[i] == item){
+                return i;
+            }
+        }
+    return -1;
     }
 
 	public static void main(String[] args) {
@@ -216,7 +251,7 @@ public class List {
                 // review the output testcase file
                 System.out.println(l);
                 break;
-                case "remove":
+               case "remove":
                 l.remove(Integer.parseInt(tokens[1]));
                 break;
                 case "indexOf":
