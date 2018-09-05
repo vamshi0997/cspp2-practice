@@ -168,7 +168,7 @@ public final class List {
     /**
      * @param items int[]
      */
-    public void addall(int[] items) {
+    public void addAll(int[] items) {
         for (int i = 0; i < items.length; i++) {
             if (items[i] != 0) {
             array[size] = items[i];
@@ -317,7 +317,13 @@ public final class List {
             // based on the list operation invoke the corresponding method
             switch (tokens[0]) {
                 case "add":
+                try {
                 l.add(Integer.parseInt(tokens[1]));
+                }
+                catch(Exception e) {
+                System.out.println(tokens.length);
+                l.addindex(Integer.parseInt(tokens[0]), Integer.parseInt(tokens[1])); 
+                }
                 break;
                 case "size":
                 // invoke size method and print the list size
@@ -348,14 +354,15 @@ public final class List {
                 break;
                 case "count":
                 System.out.println(l.count(Integer.parseInt(tokens[1])));
-                case "addall":
+                case "addAll":
+                tokens = tokens[0].split(",");
                 int[] arr = new int[10];
-                for (int i = 1; i < tokens.length-1; i++ ){
-                    arr[i-1] = Integer.parseInt(tokens[i]);
+                for (int i = 0; i < tokens.length; i++ ){
+                    arr[i] = Integer.parseInt(tokens[i]);
                 }
-                l.addall(arr);
-                case "addindex":
-                l.addindex(Integer.parseInt(tokens[1]), Integer.parseInt(tokens[2]));
+                l.addAll(arr);
+                //case "add":
+                //l.addindex(Integer.parseInt(tokens[1]), Integer.parseInt(tokens[2]));
                 default:
                 break;
             }
