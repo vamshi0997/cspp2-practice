@@ -176,7 +176,7 @@ public final class List {
      * @param items int[]
      */
     public void addAll(int[] items) {
-        if (size == array.length){
+        if (items.length == array.length){
             resize();
         }
         for (int i = 0; i < items.length; i++) {
