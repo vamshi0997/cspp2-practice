@@ -112,7 +112,9 @@ public final class List {
         }
         size += 1;
     }
-
+    /**
+     * resize method
+     */
     private void resize() {
         array = Arrays.copyOf(array, 2 * array.length);
     }
@@ -363,8 +365,8 @@ public final class List {
                 int temp = l.get(Integer.parseInt(tokens[1]));
                 if (temp != -1) {
                 System.out.println(temp);
-                } else
-                {
+                } 
+                else {
                 System.out.println(-1);
                 }
                 break;
@@ -376,9 +378,9 @@ public final class List {
                 break;
                 case "addAll":
                 if (tokens.length > 1) {
-                String [] tokens1 = tokens[1].split(",");
+                String[] tokens1 = tokens[1].split(",");
                 int[] arr = new int[tokens1.length];
-                for (int i = 0; i < tokens1.length; i++ ){
+                for (int i = 0; i < tokens1.length; i++) {
                     arr[i] = Integer.parseInt(tokens1[i]);
                 }
                 l.addAll(arr);
