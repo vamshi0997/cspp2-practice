@@ -214,7 +214,7 @@ public final class List {
      * @param item integer.
      * @return integer.
      */
-    public int count(int item) {
+    public int count(final int item) {
         int count1 = 0;
         for (int i = 0; i < size; i++) {
             if (array[i] == item) {
@@ -335,10 +335,10 @@ public final class List {
                 case "add":
                 try {
                 l.add(Integer.parseInt(tokens[1]));
-                }
-                catch (Exception e) {
+                } catch (Exception e) {
                 String[] tokens1 = tokens[1].split(",");
-                l.add(Integer.parseInt(tokens1[0]), Integer.parseInt(tokens1[1]));
+                l.add(Integer.parseInt(tokens1[0]),
+                    Integer.parseInt(tokens1[1]));
                 }
                 break;
                 case "size":
@@ -363,8 +363,7 @@ public final class List {
                 int temp = l.get(Integer.parseInt(tokens[1]));
                 if (temp != -1) {
                 System.out.println(temp);
-                }
-                else {
+                } else {
                 System.out.println(-1);
                 }
                 break;
