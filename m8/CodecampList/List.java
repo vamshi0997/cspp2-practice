@@ -182,7 +182,7 @@ public final class List {
      * @param item integer
      */
     public void add (int index, int item) {
-        if (size != 0) {
+        if (size != 0 && index < size && index > 0) {
             size += 1;
         for (int i = size-1; i >= index; i--) {
             array[i+1] = array[i];
@@ -191,9 +191,12 @@ public final class List {
             }
         }
         }
-        else {
+        else if (index == 0 ){
             array[index] = item;
             size += 1;
+        }
+        else if (index < 0) {
+            System.out.println("Negative Index Exception");
         }
     }
     /**
@@ -227,10 +230,12 @@ public final class List {
      */
     public int get(final int index) {
         // Replace the code below to write the code for get
+        if (index < size && index >= 0){
         for (int i = 0; i < size; i++) {
             if (i == index) {
                 return array[i];
             }
+        }
         }
     return -1;
     }
@@ -347,6 +352,9 @@ public final class List {
                 int temp = l.get(Integer.parseInt(tokens[1]));
                 if (temp != -1) {
                 System.out.println(temp);
+                } else
+                {
+                System.out.println(-1);
                 }
                 break;
                 case "contains":
