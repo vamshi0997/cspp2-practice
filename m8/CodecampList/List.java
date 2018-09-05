@@ -378,7 +378,7 @@ public final class List {
                 break;
                 case "addAll":
                 int[] arr = new int[10];
-                if (tokens.length > 11) {
+                if (tokens.length > 8) {
                 arr = Arrays.copyOf(arr,2 * arr.length);
                 }
                 System.out.println(arr.length);
