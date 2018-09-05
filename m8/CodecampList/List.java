@@ -377,10 +377,10 @@ public final class List {
                 System.out.println(l.count(Integer.parseInt(tokens[1])));
                 break;
                 case "addAll":
-                if (tokens.length > 1) {
-                tokens = tokens[1].split(",");
                 int[] arr = new int[0];
                 arr = Arrays.copyOf(arr,2*arr.length);
+                if (tokens.length > 1) {
+                tokens = tokens[1].split(",");
                 for (int i = 0; i < tokens.length; i++ ){
                     arr[i] = Integer.parseInt(tokens[i]);
                 }
