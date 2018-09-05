@@ -150,7 +150,7 @@ public final class List {
    public void remove(final int index) {
         // write the logic for remove here.
         // Think about what to do to the size variable.
-        if (index < size) {
+        if (index < size && index > 0) {
             for (int i = 0; i <= size; i++) {
                 if (i == index) {
                     for (int j = i; j < array.length - 1; j++) {
@@ -356,12 +356,14 @@ public final class List {
                 System.out.println(l.count(Integer.parseInt(tokens[1])));
                 break;
                 case "addAll":
+                if (tokens.length > 1) {
                 tokens = tokens[1].split(",");
                 int[] arr = new int[10];
                 for (int i = 0; i < tokens.length; i++ ){
                     arr[i] = Integer.parseInt(tokens[i]);
                 }
                 l.addAll(arr);
+                }
                 break;
                 default:
                 break;
