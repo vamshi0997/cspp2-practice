@@ -181,7 +181,7 @@ public final class List {
      * @param index integer
      * @param item integer
      */
-    public void addindex (int index, int item) {
+    public void add (int index, int item) {
         if (size != 0) {
             size += 1;
         for (int i = size-1; i >= index; i--) {
@@ -321,8 +321,8 @@ public final class List {
                 l.add(Integer.parseInt(tokens[1]));
                 }
                 catch(Exception e) {
-                System.out.println(tokens.length);
-                l.addindex(Integer.parseInt(tokens[0]), Integer.parseInt(tokens[1])); 
+                String[] tokens1 = tokens[1].split(",");
+                l.add(Integer.parseInt(tokens1[0]), Integer.parseInt(tokens1[1])); 
                 }
                 break;
                 case "size":
@@ -355,7 +355,7 @@ public final class List {
                 case "count":
                 System.out.println(l.count(Integer.parseInt(tokens[1])));
                 case "addAll":
-                tokens = tokens[0].split(",");
+                tokens = tokens[1].split(",");
                 int[] arr = new int[10];
                 for (int i = 0; i < tokens.length; i++ ){
                     arr[i] = Integer.parseInt(tokens[i]);
