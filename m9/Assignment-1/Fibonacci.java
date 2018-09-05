@@ -30,6 +30,8 @@ public class Fibonacci
         // todo - complete this method
         List a = new List();
         int first = 0, second = 1, fib1;
+        a.add(first);
+        a.add(second);
         for (int i = 0; i < n; i++) {
             fib1 = second + first;
             first = second;
