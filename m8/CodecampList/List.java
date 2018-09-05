@@ -375,9 +375,9 @@ public final class List {
                 System.out.println(l.count(Integer.parseInt(tokens[1])));
                 break;
                 case "addAll":
+                if (tokens.length > 1) {
                 String [] tokens1 = tokens[1].split(",");
                 int[] arr = new int[tokens1.length];
-                if (tokens.length > 1) {
                 for (int i = 0; i < tokens1.length; i++ ){
                     arr[i] = Integer.parseInt(tokens1[i]);
                 }
