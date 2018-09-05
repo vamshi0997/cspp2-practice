@@ -18,7 +18,7 @@ import java.util.Scanner;
  */
 /**
  * class fabonacci.
- * 
+ *
  */
 public class Fibonacci  {
     /*
@@ -45,7 +45,7 @@ public class Fibonacci  {
     /**
      * @param args String
      */
-	public static void main(String[] args) {
+    public static void main(final String[] args) {
         Scanner s = new Scanner(System.in);
         int n = s.nextInt();
         System.out.println(fib(n));
