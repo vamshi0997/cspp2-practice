@@ -110,6 +110,10 @@ public final class List {
         size += 1;
     }
 
+    private void resize() {
+        array = Arrays.copyOf(array, 2*size);
+    }
+
     /*
      * The size method returns the value of the size.
      * The purpose of the method is to announce the size of the list
