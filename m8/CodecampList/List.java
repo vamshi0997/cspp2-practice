@@ -164,6 +164,10 @@ public final class List {
             System.out.println("Invalid Position Exception");
         }
     }
+
+    /**
+     * @param items int[]
+     */
     public void addall(int[] items) {
         for (int i = 0; i < items.length; i++) {
             if (items[i] != 0) {
@@ -171,11 +175,17 @@ public final class List {
             size += 1;
             }
         }
-        //System.out.println(sum);
     }
+
+    /**
+     * @param index integer
+     * @param item integer
+     */
     public void addindex (int index, int item) {
         if (size != 0) {
-        for (int i = 0; i < size; i++) {
+            size += 1;
+        for (int i = size-1; i >= index; i--) {
+            array[i+1] = array[i];
             if (i == index) {
                 array[index] = item;
             }
@@ -186,6 +196,10 @@ public final class List {
             size += 1;
         }
     }
+    /**
+     * @param item integer.
+     * @return integer.
+     */
     public int count(int item) {
         int count1 = 0;
         for (int i = 0; i < size; i++) {
@@ -335,8 +349,8 @@ public final class List {
                 case "count":
                 System.out.println(l.count(Integer.parseInt(tokens[1])));
                 case "addall":
-                int[] arr = new int[5];
-                for (int i = 1; i < tokens.length; i++ ){
+                int[] arr = new int[10];
+                for (int i = 1; i < tokens.length-1; i++ ){
                     arr[i-1] = Integer.parseInt(tokens[i]);
                 }
                 l.addall(arr);
