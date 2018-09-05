@@ -29,7 +29,7 @@ public class Fibonacci
     public static List fib(int n) {
         // todo - complete this method
         List a = new List();
-        int first = 1, second = 2, fib1;
+        int first = 0, second = 1, fib1;
         for (int i = 0; i < n; i++) {
             fib1 = second + first;
             first = second;
