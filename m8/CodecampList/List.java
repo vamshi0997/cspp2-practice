@@ -377,7 +377,7 @@ public final class List {
                 System.out.println(l.count(Integer.parseInt(tokens[1])));
                 break;
                 case "addAll":
-                int[] arr = new int[10];
+                int[] arr = new int[12];
                 if (arr.length > 10) {
                 arr = Arrays.copyOf(arr,2*arr.length);
                 }
