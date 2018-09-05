@@ -203,12 +203,10 @@ public final class List {
                 array[index] = item;
             }
         }
-        }
-        else if (index == 0 ){
+        } else if (index == 0) {
             array[index] = item;
             size += 1;
-        }
-        else if (index < 0) {
+        } else if (index < 0) {
             System.out.println("Negative Index Exception");
         }
     }
@@ -219,7 +217,7 @@ public final class List {
     public int count(int item) {
         int count1 = 0;
         for (int i = 0; i < size; i++) {
-            if (array[i] == item){
+            if (array[i] == item) {
                 count1 += 1;
             }
         }
