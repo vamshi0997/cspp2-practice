@@ -157,7 +157,7 @@ public final class List {
    public void remove(final int index) {
         // write the logic for remove here.
         // Think about what to do to the size variable.
-        if (index < size && index > 0) {
+        if (index < size && index >= 0) {
             for (int i = 0; i <= size; i++) {
                 if (i == index) {
                     for (int j = i; j < array.length - 1; j++) {
