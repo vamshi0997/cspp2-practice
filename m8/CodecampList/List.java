@@ -104,7 +104,7 @@ public final class List {
      */
     public void add(final int item) {
         //Inserts the specified element at the end of the list.
-        if (size == array.length){
+        if (size == array.length) {
             resize();
         }
         for (int i = size; i <= size; i++) {
@@ -113,7 +113,7 @@ public final class List {
         size += 1;
     }
     /**
-     * resize method
+     * resize method.
      */
     private void resize() {
         array = Arrays.copyOf(array, 2 * array.length);
@@ -177,8 +177,8 @@ public final class List {
     /**
      * @param items int[]
      */
-    public void addAll(int[] items) {
-        if (size+items.length >= array.length) {
+    public void addAll(final int[] items) {
+        if (size + items.length >= array.length) {
             resize();
         }
         for (int i = 0; i < items.length; i++) {
@@ -191,14 +191,14 @@ public final class List {
      * @param index integer
      * @param item integer
      */
-    public void add (int index, int item) {
-        if (size == array.length){
+    public void add(final int index, final int item) {
+        if (size == array.length) {
             resize();
         }
         if (size != 0 && index < size && index > 0) {
             size += 1;
-        for (int i = size-1; i >= index; i--) {
-            array[i+1] = array[i];
+        for (int i = size - 1; i >= index; i--) {
+            array[i + 1] = array[i];
             if (i == index) {
                 array[index] = item;
             }
@@ -243,7 +243,7 @@ public final class List {
      */
     public int get(final int index) {
         // Replace the code below to write the code for get
-        if (index < size && index >= 0){
+        if (index < size && index >= 0) {
         for (int i = 0; i < size; i++) {
             if (i == index) {
                 return array[i];
@@ -338,9 +338,9 @@ public final class List {
                 try {
                 l.add(Integer.parseInt(tokens[1]));
                 }
-                catch(Exception e) {
+                catch (Exception e) {
                 String[] tokens1 = tokens[1].split(",");
-                l.add(Integer.parseInt(tokens1[0]), Integer.parseInt(tokens1[1])); 
+                l.add(Integer.parseInt(tokens1[0]), Integer.parseInt(tokens1[1]));
                 }
                 break;
                 case "size":
@@ -355,7 +355,7 @@ public final class List {
                 // review the output testcase file
                 System.out.println(l);
                 break;
-               case "remove":
+                case "remove":
                 l.remove(Integer.parseInt(tokens[1]));
                 break;
                 case "indexOf":
@@ -365,7 +365,7 @@ public final class List {
                 int temp = l.get(Integer.parseInt(tokens[1]));
                 if (temp != -1) {
                 System.out.println(temp);
-                } 
+                }
                 else {
                 System.out.println(-1);
                 }
