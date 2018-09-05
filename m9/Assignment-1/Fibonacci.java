@@ -28,17 +28,17 @@ public class Fibonacci
      */
     public static List fib(int n) {
         // todo - complete this method
-        List a = new List();
+        List arr = new List();
         int first = 0, second = 1, fib1;
-        a.add(first);
-        a.add(second);
+        arr.add(first);
+        arr.add(second);
         for (int i = 0; i < n-2; i++) {
             fib1 = second + first;
             first = second;
             second = fib1;
-            a.add(fib1);
+            arr.add(fib1);
         }
-        return a;
+        return arr;
     }
 
 
