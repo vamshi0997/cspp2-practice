@@ -70,7 +70,7 @@ public class List {
         // What should be the default values?
         // In the case of the list, it should be empty but
         // it should be initialized with an array size like 10
-        list = new int[100];
+        list = new int[10];
         //arr = new int[10];
 
         // Think about the initial value for size.
@@ -96,6 +96,10 @@ public class List {
      */
 
     // todo - add an overloaded constructor here
+    public List(int n) {
+        list = new int[n];
+        size = 0;
+    }
 
     
     /*
