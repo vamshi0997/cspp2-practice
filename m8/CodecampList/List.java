@@ -354,6 +354,7 @@ public final class List {
                 break;
                 case "count":
                 System.out.println(l.count(Integer.parseInt(tokens[1])));
+                break;
                 case "addAll":
                 tokens = tokens[1].split(",");
                 int[] arr = new int[10];
@@ -361,8 +362,7 @@ public final class List {
                     arr[i] = Integer.parseInt(tokens[i]);
                 }
                 l.addAll(arr);
-                //case "add":
-                //l.addindex(Integer.parseInt(tokens[1]), Integer.parseInt(tokens[2]));
+                break;
                 default:
                 break;
             }
