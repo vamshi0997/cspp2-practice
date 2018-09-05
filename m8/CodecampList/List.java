@@ -164,6 +164,37 @@ public final class List {
             System.out.println("Invalid Position Exception");
         }
     }
+    public void addall(int[] items) {
+        for (int i = 0; i < items.length; i++) {
+            if (items[i] != 0) {
+            array[size] = items[i];
+            size += 1;
+            }
+        }
+        //System.out.println(sum);
+    }
+    public void addindex (int index, int item) {
+        if (size != 0) {
+        for (int i = 0; i < size; i++) {
+            if (i == index) {
+                array[index] = item;
+            }
+        }
+        }
+        else {
+            array[index] = item;
+            size += 1;
+        }
+    }
+    public int count(int item) {
+        int count1 = 0;
+        for (int i = 0; i < size; i++) {
+            if (array[i] == item){
+                count1 += 1;
+            }
+        }
+        return count1;
+    }
 
     /*
      * Get method has to return the items that is
@@ -301,6 +332,16 @@ public final class List {
                 case "contains":
                 System.out.println(l.contains(Integer.parseInt(tokens[1])));
                 break;
+                case "count":
+                System.out.println(l.count(Integer.parseInt(tokens[1])));
+                case "addall":
+                int[] arr = new int[5];
+                for (int i = 1; i < tokens.length; i++ ){
+                    arr[i-1] = Integer.parseInt(tokens[i]);
+                }
+                l.addall(arr);
+                case "addindex":
+                l.addindex(Integer.parseInt(tokens[1]), Integer.parseInt(tokens[2]));
                 default:
                 break;
             }
