@@ -176,9 +176,10 @@ public final class List {
      * @param items int[]
      */
     public void addAll(int[] items) {
-        if (items.length == array.length){
+        if (size == array.length || items.length >= array.length){
             resize();
         }
+        System.out.println(size);
         for (int i = 0; i < items.length; i++) {
             if (items[i] != 0) {
             array[size] = items[i];
