@@ -104,6 +104,9 @@ public final class List {
      */
     public void add(final int item) {
         //Inserts the specified element at the end of the list.
+        if (size == array.length){
+            resize();
+        }
         for (int i = size; i <= size; i++) {
             array[size] = item;
         }
@@ -173,6 +176,9 @@ public final class List {
      * @param items int[]
      */
     public void addAll(int[] items) {
+        if (size == array.length){
+            resize();
+        }
         for (int i = 0; i < items.length; i++) {
             if (items[i] != 0) {
             array[size] = items[i];
@@ -186,6 +192,9 @@ public final class List {
      * @param item integer
      */
     public void add (int index, int item) {
+        if (size == array.length){
+            resize();
+        }
         if (size != 0 && index < size && index > 0) {
             size += 1;
         for (int i = size-1; i >= index; i--) {
@@ -370,7 +379,8 @@ public final class List {
                 case "addAll":
                 if (tokens.length > 1) {
                 tokens = tokens[1].split(",");
-                int[] arr = new int[10];
+                int[] arr = new int[0];
+                arr = Arrays.copyOf(arr,arr.length+1);
                 for (int i = 0; i < tokens.length; i++ ){
                     arr[i] = Integer.parseInt(tokens[i]);
                 }
