@@ -209,14 +209,22 @@ public class List {
         if (index == 0) {
         count1 += 1;
         }
-            if (index >= 0 && index < size && count1 > 1) {
-                for (int i = index; i < size - 1; i++) {
-                    list[i] = list[i + 1];
-                }
-                size--;
-            } else {
-                System.out.println("Invalid Position Exception");
+        if (count1 > 1) {
+        if (index >= 0 && index < size) {
+            for (int i = index; i < size - 1; i++) {
+                list[i] = list[i + 1];
             }
+            size--;
+        } else {
+            System.out.println("Invalid Position Exception");
+        }
+        } else {
+           for (int i = index; i < size - 1; i++) {
+                list[i] = list[i + 1];
+            }
+            size--;
+            System.out.println("Invalid Position Exception"); 
+        }
     }
 
     /*
