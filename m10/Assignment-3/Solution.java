@@ -1,14 +1,24 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
 //A Class is implemented for Student details
+/**
+ * @author vsamshi.
+ */
 class Student {
+	/**
+	 * private name.
+	 */
 	private String name;
-	
+	/** 
+	 * @param name string.
+	 */
 	public Student(String name) {
 	//A constructor used to initialize the instance variables
 		this.name = name;
 	}
-
+    /**
+     * @return string.
+     */
 	public String getName() {
 	//Getter method which returns the value of instance variable
 		return this.name;
@@ -24,15 +34,21 @@ class Student {
 		Student that = (Student) other;
 		return this.getName().equals(that.getName());
 	}
-
+    /**
+     * @return string.
+     */
 	public String toString() {
 		return this.name;
 	}
 }
-
+/**
+ * class solution.
+ */
 public class Solution {
 	
-
+    /**
+     * @param args string
+     */
 	public static void main(String[] args) {
         // create an object of the list to invoke methods on it
         Scanner stdin = new Scanner(new BufferedInputStream(System.in));
@@ -53,7 +69,7 @@ public class Solution {
 			                listString.add(tokens[1]);
 		                break;
 		                case "addAll":
-		                if(tokens.length == 2) {
+		                if (tokens.length == 2) {
 		                String[] t1 = tokens[1].split(",");
 		                listString.addAll(t1);
 		                }
@@ -65,7 +81,8 @@ public class Solution {
 		                System.out.println(listString.size());
 		                break;
 		                case "print":
-		                // print the list (implement toString in List class
+		                // print the list
+		                //(implement toString in List class
 		                //for this to work)
 		                // expected format is [item-1,item-2,...,item-n]
 		                // review the output testcase file
@@ -277,7 +294,7 @@ public class Solution {
 			                listDouble.add(Double.parseDouble(tokens[1]));
 		                break;
 		                case "addAll":
-		                if(tokens.length==2) {
+		                if(tokens.length == 2) {
 		                String[] t1 = tokens[1].split(",");
 		                Double[] temp = new Double[t1.length];
 		                for (int i = 0; i < t1.length; i++) {
@@ -353,9 +370,10 @@ public class Solution {
 		                System.out.println(listStudent.size());
 		                break;
 		                case "print":
-		                // print the list (implement toString in List class
-		                //for this to work)
-		                // expected format is [item-1,item-2,...,item-n]
+		                // print the list (
+		                //implement toString in List class
+		                //for this to work)expected
+		                //format is [item-1,item-2,...,item-n]
 		                // review the output testcase file
 		                System.out.println(listStudent);
 		                break;
@@ -365,15 +383,16 @@ public class Solution {
 		                break;
 		                case "indexOf":
 		                System.out.println(
-		                	listStudent.indexOf(new Student(tokens[1])));
+		                	listStudent.indexOf(
+		                		new Student(tokens[1])));
 		                break;
 		                case "get":
 		                System.out.println(listStudent.get(
 		                	Integer.parseInt(tokens[1])));
 		                break;
 		                case "contains":
-		                System.out.println(listStudent.contains
-		                	(new Student(tokens[1])));
+		                System.out.println(listStudent.contains(
+		                	new Student(tokens[1])));
 		                break;
 		                default:
 		                break;
