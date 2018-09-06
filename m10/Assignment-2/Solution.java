@@ -7,7 +7,7 @@ public class Solution {
     /**
      * @default constructor.
      */
-    public Solution() {
+    private Solution() {
 
     }
     /**
