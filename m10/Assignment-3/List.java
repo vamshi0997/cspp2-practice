@@ -3,7 +3,7 @@ import java.io.PrintStream;
 import java.util.Arrays;
 import java.util.Scanner;
 
-/*
+    /*
      * The goal for the list is to store items.
      * How are we going to store the items in the list?
      * An array would be good. Right?
@@ -13,16 +13,31 @@ import java.util.Scanner;
      * Here E is a type parameter, and it will be replaced with 
         actual type when the object got created. 
      */
+/**
+ * class list.
+ */
 public class List<E> {
+    /**
+     * private list.
+     */
     private E[] list;
+    /**
+     * private size.
+     */
     private int size;
     //Constructor
+    /**
+     * @default constructor.
+     */
     public List() {
         // Create a variable of the type Object[]
         list = ((E[])new Object[10]);//Object is the base class for all the classes
         size = 0;
     }
     //Overloaded Constructor
+    /**
+     * @param param integer.
+     */
     public List(int param) {
         list = ((E[])new Object[param]);
         size = 0;
@@ -35,6 +50,9 @@ public class List<E> {
      * Think about how you can use the size variable to add item
      * to the list.
      */
+    /**
+     * @param item E
+     */
     public void add(E item) {
         //Inserts the specified element at the end of the list.
         //You can modify the code in this method.
@@ -42,6 +60,9 @@ public class List<E> {
     }
     /*Inserts all the elements of specified int 
     array to the end of list*/
+    /**
+     * @param items E[].
+     */
     public void addAll(E[] items) {
         //Write logic for addAll method
         if (size + items.length >= list.length) {
@@ -52,6 +73,9 @@ public class List<E> {
             size += 1;
         }
     }
+    /**
+     * resize method.
+     */
     private void resize() {
         list = Arrays.copyOf(list, 2 * list.length);
     }
@@ -61,6 +85,9 @@ public class List<E> {
      * to the objects outside the list
      * 
      * The method returns an int. Empty list should return 0.
+     */
+    /**
+     * @return integer.
      */
     public int size() {
         return size;
@@ -85,6 +112,9 @@ public class List<E> {
      * array = [1,3,0,0,0,0,0,0,0,0]
      * The method returns void (nothing)
      */
+    /**
+     * @param index integer.
+     */
     public void remove(int index) {
         //Write logic for remove method
         if (index >= 0 && index < size) {
@@ -107,6 +137,13 @@ public class List<E> {
      * How do we check if the position is greater than the 
      * number of items in the list? Would size variable be useful?
      */
+    /**
+     * @brief [brief description]
+     * @details [long description]
+     * 
+     * @param index integer.
+     * @return E
+     */
     public E get(int index) {
          //Write logic for get method
         if (index < 0 || index >= size) {
@@ -125,7 +162,6 @@ public class List<E> {
      * System.out.println(l);
      * This statement is a shortcut for
      * System.out.println(l.toString());
-     * 
      * So, implement the toString method to display the items
      * in the list in the square brackets notation.
      * i.e., if the list has numbers 1, 2, 3
@@ -135,6 +171,9 @@ public class List<E> {
      * toString should only return the items in the list and
      * not all the elements of the array.
      *
+     */
+    /**
+     * @return string.
      */
     public String toString() {
        if (size == 0) {
@@ -154,6 +193,10 @@ public class List<E> {
      * So, iterate through the list and return true if
      * the item exists and otherwise false
      */
+    /**
+     * @param item E
+     * @return boolean.
+     */
     public boolean contains(E item) {
 		//Write logic for contains method
         for (int i = 0; i < size; i++) {
@@ -167,6 +210,10 @@ public class List<E> {
      * Returns the index of the first occurrence 
      * of the specified element in this list,
      * or -1 if this list does not contain the element.
+     */
+    /**
+     * @param item E
+     * @return integer.
      */
     public int indexOf(E item) {
        //Write logic for indexOf method
