@@ -219,11 +219,12 @@ public class List {
             System.out.println("Invalid Position Exception");
         }
         } else {
-           for (int i = index; i < size - 1; i++) {
+           if (index >= 0 && index < size) {
+            for (int i = index; i < size - 1; i++) {
                 list[i] = list[i + 1];
             }
-            size--;
-            System.out.println("Invalid Position Exception"); 
+            size--; 
+        }
         }
     }
 
