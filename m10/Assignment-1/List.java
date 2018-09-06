@@ -54,7 +54,6 @@ public class List {
      * So, to keep track of the size we need a variable called size
      * Again, we use private as we don't want that size variable
      * to be accessed by the methods that are outside of the List class.
-     * 
      */
 
     // declare a private int size
@@ -69,19 +68,17 @@ public class List {
      * The purpose of the constructor is to initialize the
      * class variables with some default values.
      */
-    
-    
-    /**
+     /**
      * @default constructor.
      */
-    public List() {
-
+     public List() {
+        final int num = 10;
         // what are the two variables to be initialized here?
         // think about the private variables described above.
         // What should be the default values?
         // In the case of the list, it should be empty but
         // it should be initialized with an array size like 10
-        list = new int[10];
+        list = new int[num];
 
         // Think about the initial value for size.
         // How many items do we have in the list when you create it?
@@ -394,8 +391,9 @@ public class List {
                     l.add(Integer.parseInt(tokens[1]));
                 }
                 else{
-                    if (t.length > 1)
+                    if (t.length > 1) {
                         l.add(Integer.parseInt(t[0]), Integer.parseInt(t[1]));
+                    }
                     }
                 }
                 break;
