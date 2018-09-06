@@ -13,3 +13,4 @@ remove 7
 remove 6
 contains Murthy
 print
+adp
