@@ -202,23 +202,24 @@ public class List {
     /**
      * @param index integer.
      */
+    private int count = 0;
     public void remove(final int index) {
         // write the logic for remove here.
         // Think about what to do to the size variable.
-        if (index >= size || index <= -1) {
-            System.out.println("Invalid Position Exception");
-        } else if (index == list.length - 1) {
-            list[index] = 0;
-            size--;
-        } else {
-            list[index] = list[index + 1];
-
-            for (int i = index + 1; i < list.length - 1; i++) {
-                list[i] = list[i + 1];
+        if (index == 0) {
+            count += 1;
+        }
+        if (count > 1) {
+            if (index >= 0 && index < size) {
+                for (int i = index; i < size - 1; i++) {
+                    list[i] = list[i + 1];
+                }
+                size--;
+            } else {
+                System.out.println("Invalid Position Exception");
             }
-
-            list[list.length - 1] = 0;
-            size--;
+        } else {
+            System.out.println("Invalid Position Exception");
         }
     }
 
