@@ -12,7 +12,7 @@ class Student {
     /**
      * @param name1 string.
      */
-    public Student(final String name1) {
+    Student(final String name1) {
     //A constructor used to initialize the instance variables
         this.name = name1;
     }
@@ -28,8 +28,8 @@ class Student {
     /**
      * @param other Object.
      * @return boolean.
-     *@Override
      */
+    @Override
     public boolean equals(final Object other) {
          //This method is to check if two
         //students names are equal or not
