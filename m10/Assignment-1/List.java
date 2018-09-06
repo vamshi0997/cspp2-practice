@@ -209,24 +209,27 @@ public class List {
         if (index == 0) {
         count1 += 1;
         }
-        if (count1 > 1) {
+
         if (index >= 0 && index < size) {
-            for (int i = index; i < size - 1; i++) {
-                list[i] = list[i + 1];
-            }
-            size--;
-        } else {
+            if (count1 > 1) {
+                for (int i = index; i < size - 1; i++) {
+                    list[i] = list[i + 1];
+                }
+                size--;
+            } else {
+                if (index >= 0 && index < size) {
+                    for (int i = index; i < size - 1; i++) {
+                    list[i] = list[i + 1];
+                }
+                size--; 
+                }
+                System.out.println("Invalid Position Exception");
+             }
+        }
+        else {
             System.out.println("Invalid Position Exception");
         }
-        } else {
-           if (index >= 0 && index < size) {
-            for (int i = index; i < size - 1; i++) {
-                list[i] = list[i + 1];
-            }
-            size--; 
-        }
-        }
-    }
+}
 
     /*
      * Get method has to return the items that is
