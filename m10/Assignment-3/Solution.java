@@ -9,10 +9,10 @@ class Student {
      * private name.
      */
     private String name;
-    /** 
+    /**
      * @param name string.
      */
-    public Student(String name) {
+    public Student(final String name) {
     //A constructor used to initialize the instance variables
         this.name = name;
     }
@@ -26,8 +26,8 @@ class Student {
     }
 
     @Override
-    public boolean equals(Object other) { 
-        //This method is to check if two
+    public boolean equals(final Object other) {
+         //This method is to check if two
         //students names are equal or not
         if (!(other instanceof Student)) {
             return false;
@@ -38,7 +38,7 @@ class Student {
     }
     /**
      * @return string.
-     */ 
+     */
     public String toString() {
         return this.name;
     }
@@ -46,17 +46,22 @@ class Student {
 /**
  * class solution.
  */
-public class Solution {
-    
+public final class Solution {
     /**
      * @param args string
      */
-    public static void main(String[] args) {
+    /**
+     * @default constructor.
+     */
+    private Solution() {
+
+    }
+    public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
         Scanner stdin = new Scanner(new BufferedInputStream(System.in));
         String objectType = stdin.nextLine();
 
-        switch(objectType) {
+        switch (objectType) {
             case "S"://This case will be executed for String type list
                 List<String> listString = new List();
                 while (stdin.hasNext()) {
@@ -130,7 +135,7 @@ public class Solution {
                         if (tokens.length == 2) {
                         String[] t1 = tokens[1].split(",");
                         Integer[] temp = new Integer[t1.length];
-                        for (int i = 0;i < temp.length; i++) {
+                        for (int i = 0; i < temp.length; i++) {
                             temp[i] = Integer.parseInt(t1[i]);
                         }
                         listInteger.addAll(temp);
@@ -187,8 +192,8 @@ public class Solution {
                         case "addAll":
                         if (tokens.length == 2) {
                         String[] t1 = tokens[1].split(",");
-                        Float temp[] = new Float[t1.length];
-                        for (int i = 0; i < t1.length; i++ ) {
+                        Float[] temp = new Float[t1.length];
+                        for (int i = 0; i < t1.length; i++) {
                             temp[i] = Float.parseFloat(t1[i]);
                         }
                         listFloat.addAll(temp);
