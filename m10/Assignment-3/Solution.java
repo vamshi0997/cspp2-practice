@@ -25,7 +25,11 @@ class Student {
         return this.name;
     }
 
-    @Override
+    /**
+     * @param other Object.
+     * @return boolean.
+     *@Override
+     */
     public boolean equals(final Object other) {
          //This method is to check if two
         //students names are equal or not
@@ -48,14 +52,14 @@ class Student {
  */
 public final class Solution {
     /**
-     * @param args string
-     */
-    /**
      * @default constructor.
      */
     private Solution() {
 
     }
+    /**
+     * @param args string
+     */
     public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
         Scanner stdin = new Scanner(new BufferedInputStream(System.in));
