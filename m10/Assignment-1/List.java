@@ -205,13 +205,20 @@ public class List {
     public void remove(final int index) {
         // write the logic for remove here.
         // Think about what to do to the size variable.
-        if (index > 0 && index < size) {
-            for (int i = index; i < size - 1; i++) {
-                list[i] = list[i + 1];
-            }
+        if (index >= size || index <= -1) {
+            System.out.println("Invalid Position Exception");
+        } else if (index == list.length - 1) {
+            list[index] = 0;
             size--;
         } else {
-            System.out.println("Invalid Position Exception");
+            list[index] = list[index + 1];
+
+            for (int i = index + 1; i < list.length - 1; i++) {
+                list[i] = list[i + 1];
+            }
+
+            list[list.length - 1] = 0;
+            size--;
         }
     }
 
@@ -284,7 +291,12 @@ public class List {
      * @return boolean.
      */
     public boolean contains(final int item) {
-        return indexOf(item) == -1;
+        for (int i = 0; i < list.length; i++) {
+            if (list[i] == item) {
+                return true;
+            }
+        }
+    return false;
     }
 
     /*
