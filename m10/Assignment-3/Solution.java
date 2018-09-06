@@ -10,11 +10,11 @@ class Student {
      */
     private String name;
     /**
-     * @param name string.
+     * @param name1 string.
      */
-    public Student(final String name) {
+    public Student(final String name1) {
     //A constructor used to initialize the instance variables
-        this.name = name;
+        this.name = name1;
     }
     /**
      * @return string.
