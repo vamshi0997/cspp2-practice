@@ -115,7 +115,6 @@ public class List {
      * Is it the same as the end of the array?
      * Think about how you can use the size variable to add item
      * to the list.
-     * 
      * The method returns void (nothing)
      */
     /**
@@ -134,12 +133,10 @@ public class List {
      * when the maximum capacity is reached and there is no room to add items.
      * So, how do we dynamically resize the list?
      * Java doesn't support resize of array. Here are some options.
-     *
      * Option 1
      * Create a new array of the desired size,
      * and copy the contents from the original array to the new array,
      * using java.lang.System.arraycopy(...);
-     * 
      * Option 2
      * Use java.util.Arrays.copyOf(...) methods which returns a bigger array,
      * with the contents of the original array.
