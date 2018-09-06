@@ -4,11 +4,10 @@ import java.util.Arrays;
 
 /**
  * @author vamshi.
- * 
+ *
  */
 public class List {
-	//Implement all the methods mentioned to build a ListADT
-
+//Implement all the methods mentioned to build a ListADT
     /*
      * The goal for the list is to store items.
      * How are we going to store the items in the list?
@@ -30,7 +29,6 @@ public class List {
      * This is a hard concept to understand. Discuss with your mentor.
      *
     */
-    
     // declare a private int[]
     // don't create the array yet using new
     // that's the job of the List constructor
@@ -109,7 +107,7 @@ public class List {
     /**
      * @param capacity integer.
      */
-    public List(int capacity) {
+    public List(final int capacity) {
         size = 0;
         list = new int[capacity];
     }
@@ -128,7 +126,7 @@ public class List {
     /**
      * @param item integer.
      */
-    public void add(int item) {
+    public void add(final int item) {
         //Inserts the specified element at the end of the zelist.
         list[size++] = item;   
     }
@@ -209,7 +207,7 @@ public class List {
     /**
      * @param index integer.
      */
-    public void remove(int index) {
+    public void remove(final int index) {
         // write the logic for remove here.
         // Think about what to do to the size variable.
         if(index >= 0 && index < size) {
@@ -237,7 +235,7 @@ public class List {
      * @param index integer.
      * @return integer.
      */
-    public int get(int index) {
+    public int get(final int index) {
         if(index < 0 || index >= size) {
             return -1;
         } else {
@@ -290,7 +288,7 @@ public class List {
      * @param item integer.
      * @return boolean.
      */
-    public boolean contains(int item) {
+    public boolean contains(final int item) {
         return indexOf(item) == -1;
     }
 
@@ -303,7 +301,7 @@ public class List {
      * @param item integer.
      * @return integer.
      */
-    public int indexOf(int item) {
+    public int indexOf(final int item) {
         for(int i = 0; i < size; i++) {
             if(item == list[i])
                 return i;
@@ -315,7 +313,7 @@ public class List {
     /**
      * @param items integer.
      */
-    public void addAll(int items[])
+    public void addAll(final int items[])
     {
         if (size + items.length >= list.length) {
             resize();
@@ -328,14 +326,14 @@ public class List {
 
      /* 
         Inserts the specified element at the specified index 
-	by moving all the elements to the right.
+    by moving all the elements to the right.
         The method returns void (nothing)
      */
     /**
      * @param index integer.
      * @param item integer.
      */
-    public void add(int index,int item) {
+    public void add(final int index,final int item) {
         if (size == list.length) {
             resize();
         }
@@ -360,7 +358,7 @@ public class List {
      * @param item integer.
      * @return integer.
      */
-    public int count(int item)
+    public int count(final int item)
     {
         int count1 = 0;
         for (int i = 0; i < size; i++) {
@@ -375,7 +373,7 @@ public class List {
      * main class.
      * @param args string.
      */
-	public static void main(String[] args) {
+    public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
         List l = new List();
 
@@ -405,11 +403,12 @@ public class List {
                 System.out.println(l.count(Integer.parseInt(tokens[1])));
                 break;
                 case "addAll":
-                if(tokens.length==2){
+                if(tokens.length == 2) {
                 String[] t1 = tokens[1].split(",");
-                int temp[]=new int[t1.length];
-                for(int i=0;i<temp.length;i++)
-                    temp[i]=Integer.parseInt(t1[i]);
+                int temp[] = new int[t1.length];
+                for (int i = 0; i<temp.length; i++) {
+                    temp[i] = Integer.parseInt(t1[i]);
+                }
                 l.addAll(temp);
                 }
                 break;
@@ -439,5 +438,5 @@ public class List {
                 break;
             }
         }
-	}
+    }
 }
