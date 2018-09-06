@@ -102,6 +102,9 @@ public class List {
     /*
      * @param capacity integer.
      */
+    /**
+     * @param capacity integer
+     */
      public List(final int capacity) {
         size = 0;
         list = new int[capacity];
@@ -220,7 +223,7 @@ public class List {
      * How can an element not be there at a given position?
      * Well, if the position is greater than the number of items
      * in the list then that would mean the item doesn't exist.
-     * How do we check if the position is greater than the 
+     * How do we check if the position is greater than the
      * number of items in the list? Would size variable be useful?
      */
     /**
@@ -228,7 +231,7 @@ public class List {
      * @return integer.
      */
     public int get(final int index) {
-        if(index < 0 || index >= size) {
+        if (index < 0 || index >= size) {
             return -1;
         } else {
             return list[index];
@@ -259,17 +262,18 @@ public class List {
      * @return String
      */
     public String toString() {
-        if(size == 0)
+        if (size == 0) {
             return "[]";
+        }
         String str = "[";
         int i = 0;
-        for(i = 0; i < size - 1; i++) {
+        for (i = 0; i < size - 1; i++) {
             str = str + list[i] + ",";
         }
         str = str + list[i] + "]";
         return str;
     }
-    
+
     /*
      * Contains return true if the list has
      * the item passed as an argument to the method
@@ -285,7 +289,7 @@ public class List {
     }
 
     /*
-     * Returns the index of the first occurrence 
+     * Returns the index of the first occurrence
      * of the specified element in this list,
      * or -1 if this list does not contain the element.
      */
@@ -294,38 +298,38 @@ public class List {
      * @return integer.
      */
     public int indexOf(final int item) {
-        for(int i = 0; i < size; i++) {
-            if(item == list[i])
+        for (int i = 0; i < size; i++) {
+            if (item == list[i]) {
                 return i;
+            }
         }
         return -1;
     }
-   /*Inserts all the elements of specified int 
-    array to the end of list*/
+   /*Inserts all the elements of specified int
+   array to the end of list*/
     /**
      * @param items integer.
      */
-    public void addAll(final int items[])
-    {
+    public void addAll(final int[] items) {
         if (size + items.length >= list.length) {
             resize();
         }
         for (int i = 0; i < items.length; i++) {
             list[size] = items[i];
             size += 1;
-        } 
+        }
     }
 
-     /* 
-        Inserts the specified element at the specified index 
-    by moving all the elements to the right.
+    /*
+     Inserts the specified element at the specified index
+     by moving all the elements to the right.
         The method returns void (nothing)
      */
     /**
      * @param index integer.
      * @param item integer.
      */
-    public void add(final int index,final int item) {
+    public void add(final int index, final int item) {
         if (size == list.length) {
             resize();
         }
@@ -344,14 +348,13 @@ public class List {
             System.out.println("Negative Index Exception");
         }
     }
-    
+
     /* Returns the count of occurances of a given item in the list*/
     /**
      * @param item integer.
      * @return integer.
      */
-    public int count(final int item)
-    {
+    public int count(final int item) {
         int count1 = 0;
         for (int i = 0; i < size; i++) {
             if (list[i] == item) {
@@ -384,8 +387,7 @@ public class List {
                 String[] t = tokens[1].split(",");
                 if (t.length == 1) {
                     l.add(Integer.parseInt(tokens[1]));
-                }
-                else{
+                } else {
                     if (t.length > 1) {
                         l.add(Integer.parseInt(t[0]), Integer.parseInt(t[1]));
                     }
@@ -428,6 +430,8 @@ public class List {
                 break;
                 case "contains":
                 System.out.println(l.contains(Integer.parseInt(tokens[1])));
+                break;
+                default:
                 break;
             }
         }
