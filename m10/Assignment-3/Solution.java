@@ -66,6 +66,64 @@ public final class Solution {
      * @param args string
      */
     static void method0(final Scanner stdin) {
+        List<Float> listFloat = new List();
+                while (stdin.hasNext()) {
+                    // read the line
+                    String line = stdin.nextLine();
+                    // split the line using space
+                    String[] tokens = line.split(" ");
+                    // based on the list operation
+                    //invoke the corresponding method
+                    switch (tokens[0]) {
+                        case "add":
+                            listFloat.add(Float.parseFloat(tokens[1]));
+                        break;
+                        case "addAll":
+                        if (tokens.length == 2) {
+                        String[] t1 = tokens[1].split(",");
+                        Float[] temp = new Float[t1.length];
+                        for (int i = 0; i < t1.length; i++) {
+                            temp[i] = Float.parseFloat(t1[i]);
+                        }
+                        listFloat.addAll(temp);
+                        }
+                        break;
+                        case "size":
+                        // invoke size method and print the list size
+                        // BTW, list size is not the array size
+                        // it is the number of items in the list
+                        System.out.println(listFloat.size());
+                        break;
+                        case "print":
+                        // print the list
+                        //(implement toString in List class
+                        //for this to work)
+                        // expected format is [item-1,item-2,...,item-n]
+                        // review the output testcase file
+                        System.out.println(listFloat);
+                        break;
+                        case "remove":
+                        listFloat.remove(
+                            Integer.parseInt(tokens[1]));
+                        break;
+                        case "indexOf":
+                        System.out.println(listFloat.indexOf(
+                            Float.parseFloat(tokens[1])));
+                        break;
+                        case "get":
+                        System.out.println(listFloat.get(
+                            Integer.parseInt(tokens[1])));
+                        break;
+                        case "contains":
+                        System.out.println(listFloat.contains(
+                            Float.parseFloat(tokens[1])));
+                        break;
+                        default:
+                        break;
+                    }
+                }
+    }
+    static void method1(final Scanner stdin) {
         List<Character> listCharacter = new List();
                 while (stdin.hasNext()) {
                     // read the line
@@ -124,7 +182,7 @@ public final class Solution {
                 }
     }
 
-    static void method1(final Scanner stdin) {
+    static void method2(final Scanner stdin) {
                 List<Double> listDouble = new List();
                 while (stdin.hasNext()) {
                     // read the line
@@ -186,7 +244,7 @@ public final class Solution {
                 }
         }
 
-        static void method2(final Scanner stdin) {
+        static void method3(final Scanner stdin) {
             //Student type list i.e to store List of Student Objects
                 List<Student> listStudent = new List();
                 while (stdin.hasNext()) {
@@ -368,72 +426,17 @@ public final class Solution {
             break;
 
             case "F"://This case will be executed for Float type list
-                List<Float> listFloat = new List();
-                while (stdin.hasNext()) {
-                    // read the line
-                    String line = stdin.nextLine();
-                    // split the line using space
-                    String[] tokens = line.split(" ");
-                    // based on the list operation
-                    //invoke the corresponding method
-                    switch (tokens[0]) {
-                        case "add":
-                            listFloat.add(Float.parseFloat(tokens[1]));
-                        break;
-                        case "addAll":
-                        if (tokens.length == 2) {
-                        String[] t1 = tokens[1].split(",");
-                        Float[] temp = new Float[t1.length];
-                        for (int i = 0; i < t1.length; i++) {
-                            temp[i] = Float.parseFloat(t1[i]);
-                        }
-                        listFloat.addAll(temp);
-                        }
-                        break;
-                        case "size":
-                        // invoke size method and print the list size
-                        // BTW, list size is not the array size
-                        // it is the number of items in the list
-                        System.out.println(listFloat.size());
-                        break;
-                        case "print":
-                        // print the list
-                        //(implement toString in List class
-                        //for this to work)
-                        // expected format is [item-1,item-2,...,item-n]
-                        // review the output testcase file
-                        System.out.println(listFloat);
-                        break;
-                        case "remove":
-                        listFloat.remove(
-                            Integer.parseInt(tokens[1]));
-                        break;
-                        case "indexOf":
-                        System.out.println(listFloat.indexOf(
-                            Float.parseFloat(tokens[1])));
-                        break;
-                        case "get":
-                        System.out.println(listFloat.get(
-                            Integer.parseInt(tokens[1])));
-                        break;
-                        case "contains":
-                        System.out.println(listFloat.contains(
-                            Float.parseFloat(tokens[1])));
-                        break;
-                        default:
-                        break;
-                    }
-                }
-            break;
-
-            case "C"://This case will be executed for Character type list
                 method0(stdin);
                 break;
-            case "D"://This case will be executed for Double type list
+
+            case "C"://This case will be executed for Character type list
                 method1(stdin);
                 break;
-            case "O"://This case will be executed for
+            case "D"://This case will be executed for Double type list
                 method2(stdin);
+                break;
+            case "O"://This case will be executed for
+                method3(stdin);
                 break;
             default:
                 break;
