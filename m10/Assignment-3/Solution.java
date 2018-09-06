@@ -60,10 +60,9 @@ public final class Solution {
      * @default constructor.
      */
     private Solution() {
-
     }
-    /**
-     * @param args string
+    /** 
+     * @param stdin scanner
      */
     static void method0(final Scanner stdin) {
         List<Float> listFloat = new List();
@@ -123,6 +122,9 @@ public final class Solution {
                     }
                 }
     }
+    /** 
+     * @param stdin scanner
+     */
     static void method1(final Scanner stdin) {
         List<Character> listCharacter = new List();
                 while (stdin.hasNext()) {
@@ -181,7 +183,9 @@ public final class Solution {
                     }
                 }
     }
-
+    /** 
+     * @param stdin scanner
+     */
     static void method2(final Scanner stdin) {
                 List<Double> listDouble = new List();
                 while (stdin.hasNext()) {
@@ -243,7 +247,9 @@ public final class Solution {
                     }
                 }
         }
-
+        /** 
+         * @param stdin scanner
+         */
         static void method3(final Scanner stdin) {
             //Student type list i.e to store List of Student Objects
                 List<Student> listStudent = new List();
@@ -304,7 +310,9 @@ public final class Solution {
                     }
                 }
         } 
-
+    /**
+     * @param args String
+     */
     public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
         Scanner stdin = new Scanner(new BufferedInputStream(System.in));
