@@ -202,14 +202,14 @@ public class List {
     /**
      * @param index integer.
      */
-    private int count = 0;
+    private int count1 = 0;
     public void remove(final int index) {
         // write the logic for remove here.
         // Think about what to do to the size variable.
         if (index == 0) {
-            count += 1;
+            count1 += 1;
         }
-        if (count > 1) {
+        if (count1 > 1) {
             if (index >= 0 && index < size) {
                 for (int i = index; i < size - 1; i++) {
                     list[i] = list[i + 1];
