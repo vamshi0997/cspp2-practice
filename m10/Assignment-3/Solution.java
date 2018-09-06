@@ -61,7 +61,7 @@ public final class Solution {
      */
     private Solution() {
     }
-    /** 
+    /**
      * @param stdin scanner
      */
     static void method0(final Scanner stdin) {
@@ -122,7 +122,7 @@ public final class Solution {
                     }
                 }
     }
-    /** 
+    /**
      * @param stdin scanner
      */
     static void method1(final Scanner stdin) {
@@ -183,7 +183,7 @@ public final class Solution {
                     }
                 }
     }
-    /** 
+    /**
      * @param stdin scanner
      */
     static void method2(final Scanner stdin) {
@@ -247,7 +247,7 @@ public final class Solution {
                     }
                 }
         }
-        /** 
+        /**
          * @param stdin scanner
          */
         static void method3(final Scanner stdin) {
@@ -309,7 +309,7 @@ public final class Solution {
                         break;
                     }
                 }
-        } 
+        }
     /**
      * @param args String
      */
