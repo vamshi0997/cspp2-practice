@@ -109,7 +109,7 @@ public class List {
         size = 0;
         list = new int[capacity];
     }
-    
+
     /*
      * The add method does what the name suggests.
      * Add an int item to the list.
@@ -125,7 +125,7 @@ public class List {
      */
     public void add(final int item) {
         //Inserts the specified element at the end of the zelist.
-        list[size++] = item;   
+        list[size++] = item;
     }
 
     /*
@@ -148,13 +148,12 @@ public class List {
      * Create a method called resize(). Resize should create an new array that is
      * double the size of the old array.
      * Then copy the contents of the old array to the new one.
-     * 
      * When should the resize method be invoked and from where?
      * Will the client invoke resize or is it internal to List class?
      * Should the resize be public method or private?
      * Should the resize method return any values?
-     * You know enough of Object Oriented Programming to answer these questions :-)
-     *
+     * You know enough of Object Oriented Programming
+     * to answer these questions :-)
      */
 
     // todo create resize method
@@ -205,8 +204,8 @@ public class List {
     public void remove(final int index) {
         // write the logic for remove here.
         // Think about what to do to the size variable.
-        if(index >= 0 && index < size) {
-            for(int i = index; i < size - 1; i++) {
+        if (index >= 0 && index < size) {
+            for (int i = index; i < size - 1; i++) {
                 list[i] = list[i + 1];
             }
             size--;
