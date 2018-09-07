@@ -303,11 +303,10 @@ public class List {
     }
     } else if (start == end && (start >= 0 && end >= 0)) {
         return list1;
-      }
-      else {
+      } else {
         System.out.println("Index Out of Bounds Exception");
         return null;
-      }
+       }
     return list1;
     }
     /*
