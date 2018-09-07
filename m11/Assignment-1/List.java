@@ -271,13 +271,13 @@ public class List {
             }
         }*/
         //method 2: removing only once.
-       /* for (int i : newArray) {
+       for (int i : newArray) {
             for (int j = 0; j < size; j++) {
                 if (list[j] == i) {
                     remove(j);
                 }
             }
-        }*/
+        }
 
 
      }
