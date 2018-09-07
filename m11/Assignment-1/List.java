@@ -284,7 +284,7 @@ public class List {
     public List subList(int start, int end) {
     // write the logic for subList
     List list1 = new List();
-    if ((start >= 0 && start < size) && (end > 0 && end <= size)) {
+    if (start < end && (start >= 0) && (end >= 0)) {
     for (int i = start; i < end; i++) {
     	if (size == 0) {
     		return list1;
