@@ -303,8 +303,9 @@ public class List {
         if (start == end) {
             System.out.println("Index Out of Bounds Exception");
             return null;
-        }
-        list1.add(list[i]);
+        } else {
+            list1.add(list[i]);
+           }
     }
     System.out.println();
     } /*else if (start == end && (start >= 0 && end >= 0)) {
