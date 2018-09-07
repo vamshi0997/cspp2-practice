@@ -286,6 +286,9 @@ public class List {
     List list1 = new List();
     if ((start >= 0 && start < size) && (end > 0 && end <= size)) {
     for (int i = start; i < end; i++) {
+    	if (size == 0) {
+    		return list1;
+    	}
         list1.add(list[i]);
     }
     } else if(start == end) {
