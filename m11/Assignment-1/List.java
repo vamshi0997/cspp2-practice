@@ -263,21 +263,22 @@ public class List {
      public void removeAll(final int[] newArray) {
         // write the logic
         //method 1: removing the number many times.
-        /*for (int i = 0; i < newArray.length; i++) {
+        for (int i = 0; i < newArray.length; i++) {
             int index = indexOf(newArray[i]);
             while (index != -1) {
                 remove(index);
                 index = indexOf(newArray[i]);
             }
-        }*/
+        }
+    }
         //method 2: removing only once.
-       for (int i : newArray) {
+       /*for (int i : newArray) {
             for (int j = 0; j < size; j++) {
                 if (list[j] == i) {
                     remove(j);
                 }
             }
-        }
+        }*
 
 
      }
