@@ -199,7 +199,7 @@ public class List<E> {
     public int indexOf(E item) {
        //Write logic for indexOf method
         for (int i = 0; i < size; i++) {
-            if (item == list[i]) {
+            if (item.equals(list[i])) {
                 return i;
             }
         }
@@ -248,7 +248,9 @@ public class List<E> {
         int flag = 0;
         if (listdata.size() == size) {
             for (int i = 0; i < size; i++) {
-                if (indexOf(listdata.list[i]) == indexOf(list[i])) {
+                //System.out.println(indexOf(listdata.list[i]));
+                //System.out.println(indexOf(list[i]));
+                if (indexOf(listdata.list[i]) == (indexOf(list[i]))) {
                     flag = 0;
                 } else {
                     flag = 1;
