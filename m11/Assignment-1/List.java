@@ -291,7 +291,7 @@ public class List {
     	}
         list1.add(list[i]);
     }
-    } else if(start == end && (start > 0 && end > 0)) {
+    } else if(start == end && (start >= 0 && end >= 0)) {
         return list1;
         }
     else {
