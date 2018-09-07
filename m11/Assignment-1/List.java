@@ -298,22 +298,13 @@ public class List {
     public List subList(final int start, final int end) {
     // write the logic for subList
     List list1 = new List();
-    if (start < end && (start >= 0) && (end >= 0)) {
-    for (int i = start; i < end; i++) {
-        if (start == end) {
+    if (start >= end || (start < 0 || end < 0) || size == 0) {
             System.out.println("Index Out of Bounds Exception");
             return null;
-        } else {
-            list1.add(list[i]);
-           }
+        }
+    for (int i = start; i < end; i++) {
+        list1.add(list[i]);
     }
-    System.out.println();
-    } /*else if (start == end && (start >= 0 && end >= 0)) {
-        return list1;
-      } */ else {
-        System.out.println("Index Out of Bounds Exception");
-        return null;
-       }
     return list1;
     }
     /*
