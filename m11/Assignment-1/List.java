@@ -288,7 +288,13 @@ public class List {
     "Index Out of Bounds Exception" if any of values start and end are negative
     and also if start is greater than end.
     */
-    public List subList(int start, int end) {
+    /**
+     * @param start integer
+     * @param end integer
+     * 
+     * @return List
+     */
+    public List subList(final int start, final int end) {
     // write the logic for subList
     List list1 = new List();
     if (start < end && (start >= 0) && (end >= 0)) {
@@ -298,7 +304,7 @@ public class List {
     	}
         list1.add(list[i]);
     }
-    } else if(start == end && (start >= 0 && end >= 0)) {
+    } else if (start == end && (start >= 0 && end >= 0)) {
         return list1;
         }
     else {
@@ -312,20 +318,19 @@ public class List {
     exactly matching with the given list or not.
     */
     /**
-     * @param item integer.
+     * @param list2 List
      * @return boolean.
      */
-    public boolean equals(List list2 ) 
-    {
+    public boolean equals(List list2 ) {
     // Replace the code below
     	int count = 0;
     	for (int i = 0; i < size; i++) {
     		try {
     			for (int j = 0; j < size; j++) {
-    			    if(list[i] == list2.get(j)) {
+    			    if (list[i] == list2.get(j)) {
     			        count += 1;	
     			    }
-    			    if(count == size) {
+    			    if (count == size) {
     			    	return true;
     			    }
     		    }
@@ -342,6 +347,9 @@ public class List {
     * Think about this case and make the method
     * the simpler.
     */
+    /**
+     * clear method.
+     */
     public void clear() {
     // write the logic for clear.
     	/*for (int i = 0; i < size; i++) {
@@ -350,8 +358,10 @@ public class List {
     	size = 0;
 
     }
-
-    public static void main(String[] args) {
+    /**
+     * @param args String
+     */
+    public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
         List l = new List();
 
