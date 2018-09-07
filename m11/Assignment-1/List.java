@@ -320,7 +320,7 @@ public class List {
         int flag = 0;
         if (list2.size() == size) {
             for (int i = 0; i < size; i++) {
-                if(list2.indexOf(i) == indexOf(list[i])) {
+                if(indexOf(list2.list[i]) == indexOf(list[i])) {
                     flag = 0;
                 } else {
                     flag = 1;
