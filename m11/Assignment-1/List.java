@@ -300,14 +300,14 @@ public class List {
     List list1 = new List();
     if (start < end && (start >= 0) && (end >= 0)) {
     for (int i = start; i < end; i++) {
-        if (start == end) {
+        /*if (start == end) {
             return list1;
-        }
+        }*/
         list1.add(list[i]);
     }
-    } else if (start == end && (start >= 0 && end >= 0)) {
+    } /*else if (start == end && (start >= 0 && end >= 0)) {
         return list1;
-      } else {
+      } */ else {
         System.out.println("Index Out of Bounds Exception");
         return null;
        }
