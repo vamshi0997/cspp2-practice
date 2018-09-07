@@ -300,11 +300,13 @@ public class List {
     List list1 = new List();
     if (start < end && (start >= 0) && (end >= 0)) {
     for (int i = start; i < end; i++) {
-        /*if (start == end) {
-            return list1;
-        }*/
+        if (start == end) {
+            System.out.println("Index Out of Bounds Exception");
+            return null;
+        }
         list1.add(list[i]);
     }
+    System.out.println();
     } /*else if (start == end && (start >= 0 && end >= 0)) {
         return list1;
       } */ else {
@@ -323,7 +325,21 @@ public class List {
      */
     public boolean equals(final List list2) {
     // Replace the code below
-        int count = 0;
+        int flag = 0;
+        if (list2.size() == size) {
+            for (int i = 0; i < size; i++) {
+                if(list2.indexOf(i) == indexOf(list[i])) {
+                    flag = 0;
+                } else {
+                    flag = 1;
+                }
+            }
+            if (flag == 0) {
+                return true;
+            }
+
+        }
+        /*int count = 0;
         for (int i = 0; i < size; i++) {
             try {
                 for (int j = 0; j < size; j++) {
@@ -336,8 +352,7 @@ public class List {
                 }
             } catch (Exception e) {
                 return false;
-            }
-    }
+            }*/
 
     return false;
     }
