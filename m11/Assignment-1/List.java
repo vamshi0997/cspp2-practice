@@ -324,6 +324,7 @@ public class List {
                     flag = 0;
                 } else {
                     flag = 1;
+                    return false;
                 }
             }
             if (flag == 0) {
