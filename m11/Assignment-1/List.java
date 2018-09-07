@@ -271,6 +271,13 @@ public class List {
             	remove(indexOf(newArray[i]));
             }
         }*/
+        for (int i = 0; i < newArray.length; i++) {
+        	for (int j = 0; j < newArray.length; j++) {
+                if(list[j] == newArray[i]) {
+                	remove(j);
+                }
+        	}
+        }
 
 
      }
