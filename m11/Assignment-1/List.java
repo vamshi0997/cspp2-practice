@@ -266,11 +266,11 @@ public class List {
      public void removeAll(final int[] newArray)
      {
         // write the logic
-        for (int i = 0; i < newArray.length; i++) {
+        /*for (int i = 0; i < newArray.length; i++) {
             if (indexOf(newArray[i]) > 0 && indexOf(newArray[i]) < size) {
             	remove(indexOf(newArray[i]));
             }
-        }
+        }*/
 
 
      }
@@ -291,7 +291,7 @@ public class List {
     	}
         list1.add(list[i]);
     }
-    } else if(start == end) {
+    } else if(start == end && (start > 0 && end > 0)) {
         return list1;
         }
     else {
