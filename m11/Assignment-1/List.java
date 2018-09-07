@@ -262,18 +262,20 @@ public class List {
       */
      public void removeAll(final int[] newArray) {
         // write the logic
-        /*for (int i = 0; i < newArray.length; i++) {
-            if (indexOf(newArray[i]) > 0 && indexOf(newArray[i]) < size) {
-                remove(indexOf(newArray[i]));
+        for (int i = 0; i < newArray.length; i++) {
+            int index = indexOf(newArray[i]);
+            while (index != -1) {
+                remove(index);
+                index = indexOf(newArray[i]);
             }
-        }*/
-        for (int i : newArray) {
+        }
+       /* for (int i : newArray) {
             for (int j = 0; j < size; j++) {
                 if (list[j] == i) {
                     remove(j);
                 }
             }
-        }
+        }*/
 
 
      }
