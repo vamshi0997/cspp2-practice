@@ -155,7 +155,7 @@ public final class Solution {
                 default:
                 break;
             }
-        } 
+        }
     }
     /**
      * @param stdin scanner
@@ -210,7 +210,7 @@ public final class Solution {
                     if (tokens.length == 2) {
                         String[] t1 = tokens[1].split(",");
                         Double[] temp = new Double[t1.length];
-                        for(int i = 0; i < temp.length; i++) {
+                        for (int i = 0; i < temp.length; i++) {
                             temp[i] = Double.parseDouble(t1[i]);
                         }
                         l.addAll(temp);
@@ -220,8 +220,9 @@ public final class Solution {
                     if (tokens.length == 2) {
                         String[] t2 = tokens[1].split(",");
                         Double[] a = new Double[t2.length];
-                        for (int i = 0; i < t2.length; i++)
+                        for (int i = 0; i < t2.length; i++) {
                             a[i] = Double.parseDouble(t2[i]);
+                        }
                         l.removeAll(a);
                     }
                 break;
