@@ -134,16 +134,18 @@ class Set {
      * @return int[][]
      */
     public int[][] cartesianProduct(Set cset) {
+        int k = 0;
         int[][] narr = new int[size * cset.size()][2];
         if (size == 0 || cset.size() == 0) {
             return null;
         }
         for(int i = 0; i < size; i++) {
             for (int j = 0; j < cset.size(); j++) {
-                for (int k = 0; k < size*cset.size(); k++) {
                     //System.out.println(set[]);
+                if(k < size * cset.size()) {
                     narr[k][0] = set[i];
                     narr[k][1] = cset.set[j];
+                    k++;
                 }
             }
         }
