@@ -77,7 +77,7 @@ class Set {
         String str = "{";
         int i = 0;
         for (i = 0; i < size - 1; i++) {
-            str = str + set[i] + ",";
+            str = str + set[i] + "," + " ";
         }
         str = str + set[i] + "}";
         return str;
@@ -103,27 +103,27 @@ class Set {
      * @return Set.
      */
     public Set intersection(Set cset) {
-        //int flag = 0;
         Set nset = new Set();
-        for (int i = 0; i < cset.size(); i++) {
-            for (int j = 0; j < size; j++) {
-                if(cset.set[i] == set[j]) {
-                    nset.set[size++] = set[j];
+        for (int i = 0; i < size(); i++) {
+            for (int j = 0; j < cset.size; j++) {
+                if(cset.set[j] == set[i]) {
+                    nset.add(set[i]);
                 }
             }
         }
         return nset;
     }
+
     /**
      * @param carr int[]
      * @return Set.
      */
     public Set retainAll(int[] carr) {
         Set nset = new Set();
-        for (int i = 0; i < carr.length; i++) {
-            for (int j = 0; j < size; j++) {
-                if(carr[i] == set[j]) {
-                    nset.set[size++] = set[j];
+        for (int i = 0; i < size; i++) {
+            for (int j = 0; j < carr.length; j++) {
+                if(carr[j] == set[i]) {
+                    nset.add(set[i]);
                 }
             }
         }
@@ -135,9 +135,13 @@ class Set {
      */
     public int[][] cartesianProduct(Set cset) {
         int[][] narr = new int[size * cset.size()][2];
-        for (int k = 0; k < 6; k++) {
-            for(int i = 0; i < size; i++) {
-                for (int j = 0; j < cset.size(); j++) {
+        if (size == 0 || cset.size() == 0) {
+            return null;
+        }
+        for(int i = 0; i < size; i++) {
+            for (int j = 0; j < cset.size(); j++) {
+                for (int k = 0; k < size*cset.size(); k++) {
+                    //System.out.println(set[]);
                     narr[k][0] = set[i];
                     narr[k][1] = cset.set[j];
                 }
