@@ -104,7 +104,7 @@ class Set {
      * @brief [brief description]
      * @details [long description]
      *
-     * @param cset set.
+     * @param comparearray set.
      * @return Set.
      */
     public Set intersection(final Set comparearray) {
