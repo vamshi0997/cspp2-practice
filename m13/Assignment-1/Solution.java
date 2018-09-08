@@ -4,18 +4,24 @@ import java.util.Arrays;
 
 /**
  * Class for set.
- * @author : 
+ * @author : vamshi.
  */
 class Set {
     //your code goes here...
     //Good luck :-)
+    /**
+     * private set.
+     */
     private int[] set;
+    /**
+     * private size.
+     */
     private int size;
     /**
      * @default constructor.
      */
     Set() {
-    final int num = 10; 
+    final int num = 10;
     set = new int[num];
     size = 0;
     }
@@ -37,21 +43,20 @@ class Set {
      */
     public void add(final int item) {
         //Inserts the specified element at the end of the list.
-        if(size == set.length) {
+        if (size == set.length) {
             resize();
         }
         int flag = 1;
         if (size > 0) {
             for (int i = 0; i < size; i++) {
-                if(set[i] == item) {
+                if (set[i] == item) {
                     flag = 0;
                 }
             }
-            if(flag == 1) {
+            if (flag == 1) {
                     set[size++] = item;
             }
-        }
-        else {
+        } else {
             set[size++] = item;
         }
     }
@@ -59,7 +64,7 @@ class Set {
      * @param item integer.
      */
     public void add(final int[] item) {
-        if(size == set.length) {
+        if (size == set.length) {
             resize();
         }
         for (int i = 0; i < item.length; i++) {
@@ -98,15 +103,15 @@ class Set {
     /**
      * @brief [brief description]
      * @details [long description]
-     * 
-     * @param s set.
+     *
+     * @param cset set.
      * @return Set.
      */
-    public Set intersection(Set cset) {
+    public Set intersection(final Set cset) {
         Set nset = new Set();
         for (int i = 0; i < size(); i++) {
             for (int j = 0; j < cset.size; j++) {
-                if(cset.set[j] == set[i]) {
+                if (cset.set[j] == set[i]) {
                     nset.add(set[i]);
                 }
             }
@@ -118,11 +123,11 @@ class Set {
      * @param carr int[]
      * @return Set.
      */
-    public Set retainAll(int[] carr) {
+    public Set retainAll(final int[] carr) {
         Set nset = new Set();
         for (int i = 0; i < size; i++) {
             for (int j = 0; j < carr.length; j++) {
-                if(carr[j] == set[i]) {
+                if (carr[j] == set[i]) {
                     nset.add(set[i]);
                 }
             }
@@ -133,16 +138,16 @@ class Set {
      * @param cset Set
      * @return int[][]
      */
-    public int[][] cartesianProduct(Set cset) {
+    public int[][] cartesianProduct(final Set cset) {
         int k = 0;
         int[][] narr = new int[size * cset.size()][2];
         if (size == 0 || cset.size() == 0) {
             return null;
         }
-        for(int i = 0; i < size; i++) {
+        for (int i = 0; i < size; i++) {
             for (int j = 0; j < cset.size(); j++) {
                     //System.out.println(set[]);
-                if(k < size * cset.size()) {
+                if (k < size * cset.size()) {
                     narr[k][0] = set[i];
                     narr[k][1] = cset.set[j];
                     k++;
