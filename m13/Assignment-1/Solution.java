@@ -107,54 +107,54 @@ class Set {
      * @param cset set.
      * @return Set.
      */
-    public Set intersection(final Set compare_array) {
-        Set new_set = new Set();
+    public Set intersection(final Set comparearray) {
+        Set newset = new Set();
         for (int i = 0; i < size(); i++) {
-            for (int j = 0; j < compare_array.size; j++) {
-                if (compare_array.set[j] == set[i]) {
-                    new_set.add(set[i]);
+            for (int j = 0; j < comparearray.size; j++) {
+                if (comparearray.set[j] == set[i]) {
+                    newset.add(set[i]);
                 }
             }
         }
-        return new_set;
+        return newset;
     }
 
     /**
-     * @param compare_array int[]
+     * @param comparearray int[]
      * @return Set.
      */
-    public Set retainAll(final int[] compare_array) {
-        Set new_set = new Set();
+    public Set retainAll(final int[] comparearray) {
+        Set newset = new Set();
         for (int i = 0; i < size; i++) {
-            for (int j = 0; j < compare_array.length; j++) {
-                if (compare_array[j] == set[i]) {
-                    new_set.add(set[i]);
+            for (int j = 0; j < comparearray.length; j++) {
+                if (comparearray[j] == set[i]) {
+                    newset.add(set[i]);
                 }
             }
         }
-        return new_set;
+        return newset;
     }
     /**
-     * @param compare_set Set
+     * @param compareset Set
      * @return int[][]
      */
-    public int[][] cartesianProduct(final Set compare_set) {
+    public int[][] cartesianProduct(final Set compareset) {
         int num = 0;
-        int[][] new_array = new int[size * compare_set.size()][2];
-        if (size == 0 || compare_set.size() == 0) {
+        int[][] newarray = new int[size * compareset.size()][2];
+        if (size == 0 || compareset.size() == 0) {
             return null;
         }
         for (int i = 0; i < size; i++) {
-            for (int j = 0; j < compare_set.size(); j++) {
+            for (int j = 0; j < compareset.size(); j++) {
                     //System.out.println(set[]);
-                if (num < size * compare_set.size()) {
-                    new_array[num][0] = set[i];
-                    new_array[num][1] = compare_set.set[j];
+                if (num < size * compareset.size()) {
+                    newarray[num][0] = set[i];
+                    newarray[num][1] = compareset.set[j];
                     num++;
                 }
             }
         }
-        return new_array;
+        return newarray;
     }
 
 
