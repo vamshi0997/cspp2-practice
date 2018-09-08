@@ -40,15 +40,15 @@ class Set {
         if(size == set.length) {
             resize();
         }
-        int flag = 0;
+        int flag = 1;
         if (size > 0) {
             for (int i = 0; i < size; i++) {
                 if(set[i] == item) {
-                    flag = 1;
+                    flag = 0;
                 }
-                if(flag == 1) {
+            }
+            if(flag == 1) {
                     set[size++] = item;
-                }
             }
         }
         else {
@@ -63,7 +63,7 @@ class Set {
             resize();
         }
         for (int i = 0; i < item.length; i++) {
-            add(i);
+            add(item[i]);
         }
     }
     /**
@@ -72,14 +72,14 @@ class Set {
     public String toString() {
         // Replace the code below
         if (size == 0) {
-            return "[]";
+            return "{}";
         }
-        String str = "[";
+        String str = "{";
         int i = 0;
         for (i = 0; i < size - 1; i++) {
             str = str + set[i] + ",";
         }
-        str = str + set[i] + "]";
+        str = str + set[i] + "}";
         return str;
     }
     /**
