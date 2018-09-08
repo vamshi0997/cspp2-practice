@@ -107,54 +107,54 @@ class Set {
      * @param cset set.
      * @return Set.
      */
-    public Set intersection(final Set cset) {
-        Set nset = new Set();
+    public Set intersection(final Set compare_array) {
+        Set new_set = new Set();
         for (int i = 0; i < size(); i++) {
-            for (int j = 0; j < cset.size; j++) {
-                if (cset.set[j] == set[i]) {
-                    nset.add(set[i]);
+            for (int j = 0; j < compare_array.size; j++) {
+                if (compare_array.set[j] == set[i]) {
+                    new_set.add(set[i]);
                 }
             }
         }
-        return nset;
+        return new_set;
     }
 
     /**
-     * @param carr int[]
+     * @param compare_array int[]
      * @return Set.
      */
-    public Set retainAll(final int[] carr) {
-        Set nset = new Set();
+    public Set retainAll(final int[] compare_array) {
+        Set new_set = new Set();
         for (int i = 0; i < size; i++) {
-            for (int j = 0; j < carr.length; j++) {
-                if (carr[j] == set[i]) {
-                    nset.add(set[i]);
+            for (int j = 0; j < compare_array.length; j++) {
+                if (compare_array[j] == set[i]) {
+                    new_set.add(set[i]);
                 }
             }
         }
-        return nset;
+        return new_set;
     }
     /**
-     * @param cset Set
+     * @param compare_set Set
      * @return int[][]
      */
-    public int[][] cartesianProduct(final Set cset) {
-        int k = 0;
-        int[][] narr = new int[size * cset.size()][2];
-        if (size == 0 || cset.size() == 0) {
+    public int[][] cartesianProduct(final Set compare_set) {
+        int num = 0;
+        int[][] new_array = new int[size * compare_set.size()][2];
+        if (size == 0 || compare_set.size() == 0) {
             return null;
         }
         for (int i = 0; i < size; i++) {
-            for (int j = 0; j < cset.size(); j++) {
+            for (int j = 0; j < compare_set.size(); j++) {
                     //System.out.println(set[]);
-                if (k < size * cset.size()) {
-                    narr[k][0] = set[i];
-                    narr[k][1] = cset.set[j];
-                    k++;
+                if (num < size * compare_set.size()) {
+                    new_array[num][0] = set[i];
+                    new_array[num][1] = compare_set.set[j];
+                    num++;
                 }
             }
         }
-        return narr;
+        return new_array;
     }
 
 
