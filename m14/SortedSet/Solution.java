@@ -190,7 +190,7 @@ public final class Solution {
                 intArray = intArray(tokens[1]);
                 System.out.println(Arrays.toString(
                     s.headSet(intArray[0])).replace(
-                    "[", "{").replace("]", "}"));   
+                    "[", "{").replace("]", "}"));
                 break;
             case "last":
                 System.out.println(s.last());
