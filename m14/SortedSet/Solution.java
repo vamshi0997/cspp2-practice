@@ -140,12 +140,13 @@ class Set {
         }
         else {
             for (int i = 0; i < size; i++) {
-                if(set[i] == start) {
+                if(set[i] >= start) {
                     //System.out.println(set[i]);
                     for (int j = i; j < indexOf(end) ; j++) {
                         newset[k] = set[j];
                         k ++;
                     }
+                break;
                 }
             }
         }
