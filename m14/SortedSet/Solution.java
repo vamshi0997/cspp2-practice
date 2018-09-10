@@ -135,7 +135,7 @@ class Set {
         int k = 0;
         int[] newset = new int[10];
         if (start > end) {
-            System.out.println("Invalid Arguments​to Subset Exception");
+            System.out.println("Invalid Arguments to Subset Exception");
             return null;
         }
         else {
@@ -163,9 +163,7 @@ class Set {
         int[] newset = new int[10];
         if(element < set[0]) {
             return new int[]{};
-        } /*else if (element > set[size-1]) {
-            return set;
-        } */else {
+        } else {
             for (i = 0; i < size; i ++) {
                 if (element <= set[i]) {
                     break;
