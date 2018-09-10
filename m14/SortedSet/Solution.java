@@ -2,11 +2,14 @@
 import java.util.Arrays;
 import java.util.Scanner;
 import java.io.BufferedInputStream;
-
+/**
+ * @author vamshi
+ */
 class SortedSet extends Set {
 
-
-    //constructor
+    /**
+     * @default constructor
+     */
     SortedSet() {
         super();
     }
@@ -23,14 +26,13 @@ class SortedSet extends Set {
         }
         if (!contains(item)) {
             if (size == 0) {
-                set[size++] = item;  
-            }
-            else {
+                set[size++] = item;
+            } else {
                 for (int i = 0; i < size; i++) {
                     if (set[i] > item) {
                         size += 1;
-                        for(int j = size-1; j > i; j--) {
-                        set[j] = set[j-1];
+                        for (int j = size - 1; j > i; j--) {
+                        set[j] = set[j - 1];
                         }
                         set[i] = item;
                         flag = 1;
@@ -65,26 +67,24 @@ class SortedSet extends Set {
         if (start > end) {
             System.out.println("Invalid Arguments to Subset Exception");
             return null;
-        }
-        else {
+        } else {
             for (int i = 0; i < size; i++) {
                 if (set[i] >= start && end > last()) {
                 for (int j = i; j <= indexOf(last()); j++) {
                         newset[k] = set[j];
-                        k ++;
+                        k++;
                     }
-                break;    
-                }
-                else if(set[i] >= start) {
-                    for (int j = i; j < indexOf(end) ; j++) {
+                break;
+                } else if (set[i] >= start) {
+                    for (int j = i; j < indexOf(end); j++) {
                         newset[k] = set[j];
-                        k ++;
+                        k++;
                     }
                 break;
                 }
             }
         }
-        return Arrays.copyOf(newset,k);
+        return Arrays.copyOf(newset, k);
     }
     /**
      * @param element integer.
@@ -93,10 +93,10 @@ class SortedSet extends Set {
     public int[] headSet(final int element) {
         int i = 0;
         int[] newset = new int[10];
-        if(element < set[0]) {
+        if (element < set[0]) {
             return new int[]{};
         } else {
-            for (i = 0; i < size; i ++) {
+            for (i = 0; i < size; i++) {
                 if (element <= set[i]) {
                     break;
                 }
@@ -114,7 +114,7 @@ class SortedSet extends Set {
             System.out.println("Set Empty Exception");
             return -1;
         }
-        return set[size-1];
+        return set[size - 1];
     }
 
 }
@@ -180,14 +180,17 @@ public final class Solution {
                 break;
             case "subSet":
                 intArray = intArray(tokens[1]);
-                int[] t = s.subSet(intArray[0],intArray[1]);
-                if (t != null) {    
-                System.out.println(Arrays.toString(t).replace("[","{").replace("]","}"));
+                int[] t = s.subSet(intArray[0], intArray[1]);
+                if (t != null) { 
+                System.out.println(Arrays.toString(t).replace(
+                    "[", "{").replace("]", "}"));
                 }
                 break;
             case "headSet":
                 intArray = intArray(tokens[1]);
-                System.out.println(Arrays.toString(s.headSet(intArray[0])).replace("[","{").replace("]","}"));           
+                System.out.println(Arrays.toString(
+                    s.headSet(intArray[0])).replace(
+                    "[", "{").replace("]", "}"));          
                 break;
             case "last":
                 System.out.println(s.last());
