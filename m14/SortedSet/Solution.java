@@ -140,8 +140,14 @@ class Set {
         }
         else {
             for (int i = 0; i < size; i++) {
-                if(set[i] >= start) {
-                    //System.out.println(set[i]);
+                if (set[i] >= start && end > last()) {
+                for (int j = i; j <= indexOf(last()); j++) {
+                        newset[k] = set[j];
+                        k ++;
+                    }
+                break;    
+                }
+                else if(set[i] >= start) {
                     for (int j = i; j < indexOf(end) ; j++) {
                         newset[k] = set[j];
                         k ++;
@@ -175,7 +181,7 @@ class Set {
     public int last() {
         if (size == 0) {
             System.out.println("Set​ Empty​ Exception");
-            return 0;
+            return -1;
         }
         return set[size-1];
     }
@@ -258,10 +264,7 @@ public final class Solution {
                 System.out.println(Arrays.toString(s.headSet(intArray[0])).replace("[","{").replace("]","}"));
                 break;
                 case "last":
-                int temp = s.last();
-                if (temp != 0) {
-                    System.out.println(temp);
-                }
+                System.out.println(s.last());
                 break;
                 default:
                 break;
