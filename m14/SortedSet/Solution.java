@@ -143,14 +143,12 @@ class Set {
                 if(set[i] == start) {
                     //System.out.println(set[i]);
                     for (int j = i; j < indexOf(end) ; j++) {
-                        System.out.println(set[j]);
                         newset[k] = set[j];
                         k ++;
                     }
                 }
             }
         }
-        System.out.println(newset[0]);
         return Arrays.copyOf(newset,k);
     }
     public int[] headSet(final int element) {
@@ -165,7 +163,6 @@ class Set {
                 if (element <= set[i]) {
                     break;
                 }
-                System.out.println(set[i]);
                 newset[i] = set[i];
             }
         }
