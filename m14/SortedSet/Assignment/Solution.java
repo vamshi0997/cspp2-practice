@@ -1,4 +1,4 @@
-package Assignment-1;
+package Assignment;
 import java.io.BufferedInputStream;
 import java.util.Scanner;
 import java.util.Arrays;
@@ -13,11 +13,11 @@ class Set {
     /**
      * private set.
      */
-    private int[] set;
+    int[] set;
     /**
      * private size.
      */
-    private int size;
+    int size;
     /**
      * @default constructor.
      */
@@ -94,12 +94,19 @@ class Set {
      */
     public boolean contains(final int item) {
         // Replace the code below
-        for (int i = 0; i < set.length; i++) {
+        return indexOf(item) != -1;
+    }
+    /**
+     * @param item int
+     * @return int
+     */
+    public int indexOf(final int item) {
+        for (int i = 0; i < size; i++) {
             if (set[i] == item) {
-                return true;
+                return i;
             }
         }
-    return false;
+        return -1;
     }
     /**
      * @brief [brief description]
