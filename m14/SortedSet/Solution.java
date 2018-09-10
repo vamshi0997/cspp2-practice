@@ -135,7 +135,7 @@ class Set {
         int k = 0;
         int[] newset = new int[10];
         if (start > end) {
-            System.out.println("Invalid​ Arguments​ to​ Subset​ Exception");
+            System.out.println("Invalid Arguments​ to Subset Exception");
             return null;
         }
         else {
@@ -180,7 +180,7 @@ class Set {
  */
     public int last() {
         if (size == 0) {
-            System.out.println("Set​ Empty​ Exception");
+            System.out.println("Set Empty Exception");
             return -1;
         }
         return set[size-1];
