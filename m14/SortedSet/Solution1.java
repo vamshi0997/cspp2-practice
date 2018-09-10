@@ -1,20 +1,47 @@
-//import Assignment.Set;
-import java.util.Arrays;
-import java.util.Scanner;
 import java.io.BufferedInputStream;
+import java.util.Scanner;
+import java.util.Arrays;
+//import Assignment-1.Set;
 
-class SortedSet extends Set {
-
-
-    //constructor
-    SortedSet() {
-        super();
+/**
+ * Class for set.
+ * @author : vamshi.
+ */
+class Set {
+    //your code goes here...
+    //Good luck :-)
+    /**
+     * private set.
+     */
+    private int[] set;
+    /**
+     * private size.
+     */
+    private int size;
+    /**
+     * @default constructor.
+     */
+    Set() {
+    final int num = 10;
+    set = new int[num];
+    size = 0;
     }
-
+    /**
+     * resize method.
+     */
+    private void resize() {
+        set = Arrays.copyOf(set, 2 * set.length);
+    }
+    /**
+     * @return integer.
+     */
+    public int size() {
+        // replace the code below to implement the size method
+        return size;
+    }
     /**
      * @param item integer.
      */
-    @Override
     public void add(final int item) {
         //Inserts the specified element at the end of the list.
         int flag = 0;
@@ -44,7 +71,7 @@ class SortedSet extends Set {
         }
     }
     /**
-     * @param item int[]
+     * @param item integer.
      */
     public void addAll(final int[] item) {
         if (size == set.length) {
@@ -55,8 +82,53 @@ class SortedSet extends Set {
         }
     }
     /**
-     * @param start int
-     * @param end int
+     * @return String
+     */
+    public String toString() {
+        // Replace the code below
+        if (size == 0) {
+            return "{}";
+        }
+        String str = "{";
+        int i = 0;
+        for (i = 0; i < size - 1; i++) {
+            str = str + set[i] + "," + " ";
+        }
+        str = str + set[i] + "}";
+        return str;
+    }
+    /**
+     * @param item integer.
+     * @return boolean.
+     */
+    public boolean contains(final int item) {
+        // Replace the code below
+        /*for (int i = 0; i < set.length; i++) {
+            if (set[i] == item) {
+                return true;
+            }
+        }
+    return false;*/
+    return indexOf(item) != -1;
+    }
+    /**
+     * Finds the index of the item in this set.
+     * @param  item to be find in this set.
+     * @return the index if the item is found in this set,
+     * otherwise false.
+     */
+    public int indexOf(final int item) {
+        for (int i = 0; i < size; i++) {
+            if (set[i] == item) {
+                return i;
+            }
+        }
+        return -1;
+    }
+    /**
+     * @param start integer.
+     * @param end integer.
+     *
      * @return int[]
      */
     public int[] subSet(final int start, final int end) {
@@ -86,10 +158,6 @@ class SortedSet extends Set {
         }
         return Arrays.copyOf(newset,k);
     }
-    /**
-     * @param element integer.
-     * @return int[]
-     */
     public int[] headSet(final int element) {
         int i = 0;
         int[] newset = new int[10];
@@ -105,10 +173,9 @@ class SortedSet extends Set {
         }
         return Arrays.copyOf(newset, i);
     }
-
-   /**
-    * @return int.
-    */
+/**
+ * @return int.
+ */
     public int last() {
         if (size == 0) {
             System.out.println("Set Empty Exception");
@@ -116,7 +183,7 @@ class SortedSet extends Set {
         }
         return set[size-1];
     }
-
+    
 }
 
 
@@ -146,8 +213,8 @@ public final class Solution {
             input = s.substring(1, s.length() - 1);
         }
         return Arrays.stream(input.split(","))
-               .mapToInt(Integer::parseInt)
-               .toArray();
+                            .mapToInt(Integer::parseInt)
+                            .toArray();
     }
     /**
      * main function to execute test cases.
@@ -156,7 +223,7 @@ public final class Solution {
      */
     public static void main(final String[] args) {
         // instantiate this set
-        SortedSet s = new SortedSet();
+        Set s = new Set();
         // code to read the test cases input file
         Scanner stdin = new Scanner(new BufferedInputStream(System.in));
         // check if there is one more line to process
@@ -167,31 +234,37 @@ public final class Solution {
             String[] tokens = line.split(" ");
             // based on the list operation invoke the corresponding method
             switch (tokens[0]) {
-            case "print":
+                case "size":
+                System.out.println(s.size());
+                break;
+                case "contains":
+                System.out.println(s.contains(Integer.parseInt(tokens[1])));
+                break;
+                case "print":
                 System.out.println(s);
                 break;
-            case "add":
-                int[] intArray = intArray(tokens[1]);
-                s.add(intArray[0]);
+                case "add":
+                s.add(Integer.parseInt(tokens[1]));
                 break;
-            case "addAll":
-                intArray = intArray(tokens[1]);
+                case "addAll":
+                int[] intArray = intArray(tokens[1]);
                 s.addAll(intArray);
                 break;
-            case "subSet":
+                case "subSet":
                 intArray = intArray(tokens[1]);
                 int[] t = s.subSet(intArray[0],intArray[1]);
                 if (t != null) {    
                 System.out.println(Arrays.toString(t).replace("[","{").replace("]","}"));
                 }
                 break;
-            case "headSet":
+                case "headSet":
                 intArray = intArray(tokens[1]);
-                System.out.println(Arrays.toString(s.headSet(intArray[0])).replace("[","{").replace("]","}"));           
+                System.out.println(Arrays.toString(s.headSet(intArray[0])).replace("[","{").replace("]","}"));
                 break;
-            case "last":
+                case "last":
                 System.out.println(s.last());
-            default:
+                break;
+                default:
                 break;
             }
         }
