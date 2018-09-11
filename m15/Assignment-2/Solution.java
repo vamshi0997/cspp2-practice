@@ -59,7 +59,7 @@ class SortedSet extends Set {
     /**
      * @param start int
      * @param end int
-     * @throws exception
+     * @throws Exception
      * @return int[]
      */
     public int[] subSet(final int start, final int end) throws Exception {
@@ -209,6 +209,7 @@ public final class Solution {
                 } catch (Exception e) {
                     System.out.println("Set Empty Exception");
                 }
+                break;
             case "intersection":
                 //s = new Set();
                 Set t = new Set();
