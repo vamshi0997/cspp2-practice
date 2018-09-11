@@ -67,35 +67,16 @@ public class Set {
      * @return the result that contains the common
      * elements of the two sets.
      */
-    /*public Set intersection(Set other) {
+    public Set intersection(Set other) {
         Set result = new Set();
         System.out.println(this.size);
         for (int i = 0; i < this.size; i++) {
-            System.out.println(this.get(i));
-            //System.out.println(other.get(i));
             if (other.contains(this.get(i))) {
                 result.add(this.get(i));
             }
         }
+        size = 0;
         return result;
-    }*/
-    /**
-     * @brief [brief description]
-     * @details [long description]
-     *
-     * @param comparearray set.
-     * @return Set.
-     */
-    public Set intersection(final Set comparearray) {
-        Set newset = new Set();
-        for (int i = 0; i < size(); i++) {
-            for (int j = 0; j < comparearray.size; j++) {
-                if (comparearray.set[j] == set[i]) {
-                    newset.add(set[i]);
-                }
-            }
-        }
-        return newset;
     }
 
     /**
