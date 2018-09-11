@@ -59,8 +59,8 @@ class SortedSet extends Set {
     /**
      * @param start int
      * @param end int
-     * @throws Exception
      * @return int[]
+     * @throws Exception.
      */
     public int[] subSet(final int start, final int end) throws Exception {
         int k = 0;
@@ -88,8 +88,8 @@ class SortedSet extends Set {
     }
     /**
      * @param element integer.
-     * @throws Exception.
      * @return int[]
+     * @throws Exception.
      */
     public int[] headSet(final int element) throws Exception {
         int i = 0;
@@ -110,6 +110,7 @@ class SortedSet extends Set {
    /**
     * @throws Exception.
     * @return int.
+    * @throws Exception.
     */
     public int last() throws Exception {
         if (size == 0) {
