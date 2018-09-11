@@ -92,7 +92,7 @@ class SortedSet extends Set {
     public int[] headSet(final int element) throws Exception {
         int i = 0;
         int[] newset = new int[TEN];
-        if (element < set[0]) {
+        if (element <= set[0]) {
             throw new Exception();
         } else {
             for (i = 0; i < size; i++) {
