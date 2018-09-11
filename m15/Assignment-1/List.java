@@ -266,7 +266,7 @@ public class List {
         for (int i = 0; i < newArray.length; i++) {
             int index = indexOf(newArray[i]);
             while (index != -1) {
-                try{
+                try {
                 remove(index);
                 } catch (Exception e) {
                     System.out.println("Invalid Position Exception");
@@ -327,6 +327,20 @@ public class List {
         }
     return false;
     }
+    /* Returns the count of occurances of a given item in the list*/
+    /**
+     * @param item integer.
+     * @return integer.
+     */
+    public int count(final int item) {
+        int count1 = 0;
+        for (int i = 0; i < size; i++) {
+            if (list[i] == item) {
+                count1 += 1;
+            }
+        }
+        return count1;
+    }
     /*
     * Removes all the elements from list
     * Think about this case and make the method
@@ -372,11 +386,11 @@ public class List {
                     System.out.println(l);
                 break;
                 case "remove":
-                try{
+                try {
                     if (tokens.length == 2) {
                         l.remove(Integer.parseInt(tokens[1]));
                     }
-                } catch(Exception e) {
+                } catch (Exception e) {
                     System.out.println("Invalid Position Exception");
                 }
                 break;
@@ -423,11 +437,11 @@ public class List {
                         break;
                     }
                     String[] arrstring3 = tokens[1].split(",");
-                    try{
+                    try {
                     List object = l.subList(Integer.parseInt(arrstring3[0]),
                             Integer.parseInt(arrstring3[1]));
                     System.out.println(object);
-                    } catch(Exception e) {
+                    } catch (Exception e) {
                         System.out.println("Index Out of Bounds Exception");
                     }
                     break;
@@ -440,6 +454,9 @@ public class List {
                         }
                         System.out.println(l.equals(l2));
                     }
+                break;
+                case "count":
+                System.out.println(l.count(Integer.parseInt(tokens[1])));
                 break;
                 case "clear":
                     l.clear();
