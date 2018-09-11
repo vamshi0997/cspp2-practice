@@ -108,15 +108,12 @@ class SortedSet extends Set {
     }
 
    /**
-    * @throws Exception.
     * @return int.
-    * @throws Exception.
+    * @throws Exception Set Empty Exception.
     */
     public int last() throws Exception {
         if (size == 0) {
-            //System.out.println("Set Empty Exception");
             throw new Exception();
-            //return -1;
         }
         return set[size - 1];
     }
