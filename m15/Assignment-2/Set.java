@@ -69,7 +69,6 @@ public class Set {
      */
     public Set intersection(Set other) {
         Set result = new Set();
-        System.out.println(this.size);
         for (int i = 0; i < this.size; i++) {
             if (other.contains(this.get(i))) {
                 result.add(this.get(i));
