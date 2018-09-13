@@ -299,7 +299,7 @@ class Patron {
      * @return String.
      */
     public String toString() {
-        return number + " " + name + " " + bookingtime;
+        return number + " " + moviename + " " + bookingtime;
     }
 	/**
      * Gets the bookingtime.
