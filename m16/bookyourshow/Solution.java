@@ -213,7 +213,7 @@ class BookYourShow {
      *
      * @param moviename string.
      * @param mtime string.
-     * @param  mobilenum string. 
+     * @param  mobilenum string.
      *
      * @return represents ticket.
      */
@@ -245,15 +245,15 @@ class BookYourShow {
  * patron class.
  */
 class Patron {
-	/**
-	 * person name.
-	 */
-	private String name;
-	/**
-	 * person number.
-	 */
-	private String number;
-	/**
+    /**
+     * person name.
+     */
+    private String name;
+    /**
+     * person number.
+     */
+    private String number;
+    /**
      * time.
      */
     private String bookingtime;
@@ -262,46 +262,46 @@ class Patron {
      * moviename.
      */
     private String moviename;
-	/**
-	 * constructor.
-	 * @param name1 String
-	 * @param number1 String
-	 */
-	Patron(final String name1, final String number1) {
-		this.name = name1;
-		this.number = number1;
-	}
-	/**
-	 * @return name.
-	 */
-	String getName() {
-		return this.name;
-	}
-	/**
-	 * @param name2 String.
-	 */
-	void setName(final String name2) {
+    /**
+     * constructor.
+     * @param name1 String
+     * @param number1 String
+     */
+    Patron(final String name1, final String number1) {
+        this.name = name1;
+        this.number = number1;
+    }
+    /**
+     * @return name.
+     */
+    String getName() {
+        return this.name;
+    }
+    /**
+     * @param name2 String.
+     */
+    void setName(final String name2) {
         this.name = name2;
-	}
-	/**
-	 * @return number.
-	 */
-	public String getNumber() {
+    }
+    /**
+     * @return number.
+     */
+    public String getNumber() {
         return this.number;
-	}
-	/**
-	 * @param number2 string.
-	 */
-	void setNumber(final String number2) {
-		this.number = number2;
-	}
-	/**
+    }
+    /**
+     * @param number2 string.
+     */
+    void setNumber(final String number2) {
+        this.number = number2;
+    }
+    /**
      * @return String.
      */
     public String toString() {
         return number + " " + moviename + " " + bookingtime;
     }
-	/**
+    /**
      * Gets the bookingtime.
      *
      * @return bookingtime.
@@ -379,9 +379,9 @@ public final class Solution {
                 for (int j = 0; j < seats.length; j++) {
                     seats[j] = tokens[k++];
                 }
-                //final int tmp = 3;
+                final int temp = 3;
                 bys.bookAShow(tokens[2], check[1],
-                              tokens[3], tokens[1], seats);
+                              tokens[temp], tokens[1], seats);
                 break;
             case "get":
                 System.out.println(bys.getAShow(check[1], tokens[1]));
