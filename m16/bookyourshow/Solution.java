@@ -296,6 +296,12 @@ class Patron {
 		this.number = number2;
 	}
 	/**
+     * @return String.
+     */
+    public String toString() {
+        return number + " " + name + " " + bookingtime;
+    }
+	/**
      * Gets the bookingtime.
      *
      * @return bookingtime.
