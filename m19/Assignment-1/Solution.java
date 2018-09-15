@@ -96,7 +96,7 @@ public final class Solution {
         	    System.out.println("Quiz does not have questions");
         	    flag = 0;
         	    break;
-            } else if (question1.length < 5) {
+            } else if (question1.length == 5) {
                 System.out.println("Error! Malformed question");
                 flag = 0;
                 break;
