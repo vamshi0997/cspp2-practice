@@ -106,11 +106,11 @@ public final class Solution {
             	break;
             } else {
             	System.out.println();
-            	new Quiz(line, questionCount);
+            	System.out.println(questionCount + " " + "are added to the quiz");
+            	//new Quiz(line, questionCount);
             }
 
         }
-        System.out.println(questionCount + " " + "are added to the quiz");
     }
 
     /**
