@@ -16,7 +16,6 @@ class Quiz {
 	Quiz(final String question1, final int count) {
 		questions = new String[count];
 	    questions[k++] = question1;
-	    System.out.println(question1);
 	}
 
 	String[] getQuestion() {
@@ -112,9 +111,6 @@ public final class Solution {
 
         }
         System.out.println(questionCount + " " + "are added to the quiz");
-        for (int j = 0; j < questionCount; j++) {
-        	System.out.println(quiz.getQuestion()[j]);
-        }
     }
 
     /**
