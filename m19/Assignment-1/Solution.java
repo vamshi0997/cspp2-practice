@@ -86,6 +86,7 @@ public final class Solution {
         // tokenize the question line and create the question object
         // add the question objects to the quiz class
         Quiz question = new Quiz();
+        int flag = 1;
 
         for (int i = 0; i < questionCount; i++) {
         	String line = s.nextLine();
@@ -93,23 +94,30 @@ public final class Solution {
         	String[] choices = question1[1].split(",");
             if (questionCount < 1) {
         	    System.out.println("Quiz does not have questions");
+        	    flag = 0;
         	    break;
             } else if (question1.length < 5) {
                 System.out.println("Error! Malformed question");
+                flag = 0;
                 break;
             } else if (Integer.parseInt(question1[2]) > choices.length) {
             	System.out.println(choices.length);
             	System.out.println("Error! Correct answer choice number is out of range for question text 1");
+            	flag = 0;
             	break;
             } else if (choices.length < 1) {
             	System.out.println("trick question  does not have enough answer choices");
+            	flag = 0;
             	break;
             } else {
             	System.out.println();
-            	System.out.println(questionCount + " " + "are added to the quiz");
+            	//System.out.println(questionCount + " " + "are added to the quiz");
             	//new Quiz(line, questionCount);
             }
 
+        }
+        if (flag == 1) {
+        	System.out.println(questionCount + " " + "are added to the quiz");
         }
     }
 
