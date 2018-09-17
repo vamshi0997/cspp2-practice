@@ -44,14 +44,14 @@ class Question {
      */
     Question(final String question1, final String[] choices1,
         final int correctAnswer1, final int maxMarks1, final int penalty1) {
-    	choices = new String[choices1.length];
-    	this.questiontext = question1;
-    	for (int i = 0; i < choices1.length; i++) {
+        choices = new String[choices1.length];
+        this.questiontext = question1;
+        for (int i = 0; i < choices1.length; i++) {
             this.choices[i] = choices1[i];
-    	}
-    	this.correctAnswer = correctAnswer1;
-    	this.maxMarks = maxMarks1;
-    	this.penalty = penalty1;
+        }
+        this.correctAnswer = correctAnswer1;
+        this.maxMarks = maxMarks1;
+        this.penalty = penalty1;
     }
     /**
      * { function_description }.
@@ -61,7 +61,7 @@ class Question {
      * @return     { description_of_the_return_value }
      */
     public boolean evaluateResponse(final String choice) {
-    	return this.getCorrectAnswer().equals(choice);
+        return this.getCorrectAnswer().equals(choice);
     }
     /**
      * Gets the correct answer.
@@ -69,7 +69,7 @@ class Question {
      * @return     The correct answer.
      */
     public String getCorrectAnswer() {
-        return this.choices[correctAnswer-1];
+        return this.choices[correctAnswer - 1];
     }
     /**
      * Gets the question text.
@@ -152,6 +152,9 @@ class Quiz {
     questions = new Question[onehundred];
     size = 0;
     }
+    /**
+     * @return size.
+     */
     public int size() {
         return size;
     }
@@ -180,16 +183,19 @@ class Quiz {
      * @return     { description_of_the_return_value }
      */
     public String showReport() {
-    	int score = 0;
-    	String s = "";
-    	for (int i = 0; i < size; i++) {
-        	s += getQuestion(i).getQuestionText() + "\n";
-            if (getQuestion(i).evaluateResponse(getQuestion(i).getResponse())) {
-            	s += " Correct Answer! - Marks Awarded: " + getQuestion(i).getMaxMarks() + "\n";
-        	    score += getQuestion(i).getMaxMarks();
+        int score = 0;
+        String s = "";
+        for (int i = 0; i < size; i++) {
+            s += getQuestion(i).getQuestionText() + "\n";
+            if (getQuestion(i).evaluateResponse(
+                getQuestion(i).getResponse())) {
+                s += " Correct Answer! - Marks Awarded: " +
+                getQuestion(i).getMaxMarks() + "\n";
+                score += getQuestion(i).getMaxMarks();
             } else {
-            	s += " Wrong Answer! - Penalty: " + getQuestion(i).getPenalty() + "\n";
-            	score += getQuestion(i).getPenalty();
+                s += " Wrong Answer! - Penalty: " +
+                getQuestion(i).getPenalty() + "\n";
+                score += getQuestion(i).getPenalty();
             }
         }
         s += "Total Score: " + score;
@@ -208,6 +214,9 @@ public final class Solution {
     private Solution() {
         // leave this blank
     }
+    /**
+     * flag variable.
+     */
     private static int flag = 1;
     /**
      * main function to execute test cases.
@@ -264,29 +273,31 @@ public final class Solution {
         // tokenize the question line and create the question object
         // add the question objects to the quiz class
         if (q <= 0) {
-        	System.out.println("Quiz does not have questions");
-        	flag = 0;
-        	return;
+            System.out.println("Quiz does not have questions");
+            flag = 0;
+            return;
         }
 
         for (int i = 0; i < q; i++) {
-        	String line = scan.nextLine();
-        	String[] question = line.split(":");
-        	String[] choices = question[1].split(",");
+            String line = scan.nextLine();
+            String[] question = line.split(":");
+            String[] choices = question[1].split(",");
             if (question[0].equals("") || question.length < 5) {
                 System.out.println("Error! Malformed question");
                 flag = 0;
                 return;
             }
             if (choices.length < 2) {
-            	System.out.println(question[0] + " does not have enough answer choices");
-            	flag = 0;
-            	return;
+                System.out.println(question[0] +
+                    " does not have enough answer choices");
+                flag = 0;
+                return;
             }
             if (Integer.parseInt(question[2]) > choices.length) {
-            	System.out.println("Error! Correct answer choice number is out of range for question text 1");
-            	flag = 0;
-            	return;
+                System.out.println(
+"Error! Correct answer choice number is out of range for question text 1");
+                flag = 0;
+                return;
             }
             if (Integer.parseInt(question[3]) < 0) {
                 System.out.println("Invalid max marks for " + question[i]);
@@ -299,8 +310,8 @@ public final class Solution {
                 return;
             }
             Question q1 = new Question(question[0], choices, Integer.parseInt(
-            	question[2]), Integer.parseInt(
-            	question[3]), Integer.parseInt(question[4]));
+                question[2]), Integer.parseInt(
+                question[3]), Integer.parseInt(question[4]));
             quiz.addQuestion(q1);
         }
         System.out.println(q + " " + "are added to the quiz");
@@ -318,20 +329,22 @@ public final class Solution {
         // read the user responses from the console using scanner object.
         // store the user respone in the question object
         if (flag == 0) {
-        	return;
+            return;
         }
         for (int i = 0; i < quiz.size(); i++) {
-        	System.out.println(quiz.getQuestion(i).getQuestionText() + "(" +
-        	 quiz.getQuestion(i).getMaxMarks() + ")");
-        	for (int j = 0; j < quiz.getQuestion(i).getChoice().length-1; j++) {
-        		System.out.print(quiz.getQuestion(i).getChoice()[j] + "\t");
-        	}
-        	System.out.println(quiz.getQuestion(i).getChoice()[quiz.getQuestion(i).getChoice().length-1]);
-        	System.out.println();
-        	//System.out.println();
+            System.out.println(quiz.getQuestion(i).getQuestionText() + "("
+                + quiz.getQuestion(i).getMaxMarks() + ")");
+            for (int j = 0; j < quiz.getQuestion(
+                i).getChoice().length - 1; j++) {
+                System.out.print(quiz.getQuestion(i).getChoice()[j] + "\t");
+            }
+            System.out.println(quiz.getQuestion(i).getChoice()[
+                quiz.getQuestion(i).getChoice().length - 1]);
+            System.out.println();
+            //System.out.println();
         }
         for (int k = 0; k < q; k++) {
-        	quiz.getQuestion(k).setResponse(scan.nextLine());
+            quiz.getQuestion(k).setResponse(scan.nextLine());
         }
 
     }
@@ -343,7 +356,7 @@ public final class Solution {
     public static void displayScore(final Quiz quiz) {
         // write your code here to display the score report using quiz object.
         if (flag == 0) {
-        	return;
+            return;
         }
         quiz.showReport();
 
