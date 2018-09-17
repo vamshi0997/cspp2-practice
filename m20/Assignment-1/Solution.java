@@ -324,8 +324,9 @@ public final class Solution {
         	 quiz.getQuestion(i).getMaxMarks() + ")");
         	for (int j = 0; j < 4; j++) {
         		System.out.print(quiz.getQuestion(i).getChoice()[j] + "\t");
-        		System.out.println();
         	}
+        	System.out.println();
+        	System.out.println();
         }
         for (int k = 0; k < q; k++) {
         	quiz.getQuestion(k).setResponse(scan.nextLine());
