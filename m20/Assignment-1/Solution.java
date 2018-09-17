@@ -323,7 +323,7 @@ public final class Solution {
         for (int i = 0; i < quiz.size(); i++) {
         	System.out.println(quiz.getQuestion(i).getQuestionText() + "(" +
         	 quiz.getQuestion(i).getMaxMarks() + ")");
-        	for (int j = 0; j < 4; j++) {
+        	for (int j = 0; j < quiz.getQuestion(i).getChoice().length; j++) {
         		System.out.print(quiz.getQuestion(i).getChoice()[j] + "\t");
         	}
         	System.out.println();
