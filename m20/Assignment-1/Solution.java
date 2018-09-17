@@ -185,14 +185,14 @@ class Quiz {
     	for (int i = 0; i < size; i++) {
         	s += getQuestion(i).getQuestionText() + "\n";
             if (getQuestion(i).evaluateResponse(getQuestion(i).getResponse())) {
-            	s += "Correct Answer! - Marks Awarded: " + getQuestion(i).getMaxMarks() + "\n";
+            	s += " Correct Answer! - Marks Awarded: " + getQuestion(i).getMaxMarks() + "\n";
         	    score += getQuestion(i).getMaxMarks();
             } else {
-            	s += "Wrong Answer! - Penalty: " + getQuestion(i).getPenalty() + "\n";
+            	s += " Wrong Answer! - Penalty: " + getQuestion(i).getPenalty() + "\n";
             	score += getQuestion(i).getPenalty();
             }
         }
-        s += "Total Score:" + score;
+        s += "Total Score: " + score;
         System.out.println(s);
         return s;
     }
