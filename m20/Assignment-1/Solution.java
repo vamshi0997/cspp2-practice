@@ -193,6 +193,7 @@ class Quiz {
             }
         }
         s += "Total Score:" + score;
+        System.out.println(s);
         return s;
     }
 
@@ -330,7 +331,6 @@ public final class Solution {
         }
         for (int k = 0; k < q; k++) {
         	quiz.getQuestion(k).setResponse(scan.nextLine());
-
         }
 
     }
