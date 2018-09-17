@@ -328,7 +328,7 @@ public final class Solution {
         	}
         	System.out.println(quiz.getQuestion(i).getChoice()[quiz.getQuestion(i).getChoice().length-1]);
         	System.out.println();
-        	System.out.println();
+        	//System.out.println();
         }
         for (int k = 0; k < q; k++) {
         	quiz.getQuestion(k).setResponse(scan.nextLine());
