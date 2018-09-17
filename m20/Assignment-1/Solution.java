@@ -188,7 +188,7 @@ class Quiz {
             	s += "Correct Answer! - Marks Awarded: " + getQuestion(i).getMaxMarks() + "\n";
         	    score += getQuestion(i).getMaxMarks();
             } else {
-            	s += "Wrong Answer! - Marks Awarded: " + getQuestion(i).getPenalty() + "\n";
+            	s += "Wrong Answer! - Penalty: " + getQuestion(i).getPenalty() + "\n";
             	score += getQuestion(i).getPenalty();
             }
         }
