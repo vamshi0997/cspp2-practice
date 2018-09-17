@@ -189,8 +189,8 @@ class Quiz {
             s += getQuestion(i).getQuestionText() + "\n";
             if (getQuestion(i).evaluateResponse(
                 getQuestion(i).getResponse())) {
-                s += " Correct Answer! - Marks Awarded: " +
-                getQuestion(i).getMaxMarks() + "\n";
+                s += " Correct Answer! - Marks Awarded: "
+            + getQuestion(i).getMaxMarks() + "\n";
                 score += getQuestion(i).getMaxMarks();
             } else {
                 s += " Wrong Answer! - Penalty: " +
@@ -272,6 +272,7 @@ public final class Solution {
         // write your code here to read the questions from the console
         // tokenize the question line and create the question object
         // add the question objects to the quiz class
+        final int three = 3, four = 4, five = 5;
         if (q <= 0) {
             System.out.println("Quiz does not have questions");
             flag = 0;
@@ -282,14 +283,14 @@ public final class Solution {
             String line = scan.nextLine();
             String[] question = line.split(":");
             String[] choices = question[1].split(",");
-            if (question[0].equals("") || question.length < 5) {
+            if (question[0].equals("") || question.length < five) {
                 System.out.println("Error! Malformed question");
                 flag = 0;
                 return;
             }
             if (choices.length < 2) {
-                System.out.println(question[0] +
-                    " does not have enough answer choices");
+                System.out.println(question[0]
+                    + " does not have enough answer choices");
                 flag = 0;
                 return;
             }
@@ -299,19 +300,19 @@ public final class Solution {
                 flag = 0;
                 return;
             }
-            if (Integer.parseInt(question[3]) < 0) {
+            if (Integer.parseInt(question[three]) < 0) {
                 System.out.println("Invalid max marks for " + question[i]);
                 flag = 0;
                 return;
             }
-            if (Integer.parseInt(question[4]) > 0) {
+            if (Integer.parseInt(question[four]) > 0) {
                 System.out.println("Invalid penalty for " + question[i]);
                 flag = 0;
                 return;
             }
             Question q1 = new Question(question[0], choices, Integer.parseInt(
                 question[2]), Integer.parseInt(
-                question[3]), Integer.parseInt(question[4]));
+                question[three]), Integer.parseInt(question[four]));
             quiz.addQuestion(q1);
         }
         System.out.println(q + " " + "are added to the quiz");
