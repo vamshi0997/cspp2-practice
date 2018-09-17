@@ -250,7 +250,7 @@ public final class Solution {
                 System.out.println("Error! Malformed question");
                 return;
             }
-            if (choices.length < 1) {
+            if (choices.length < 2) {
             	System.out.println(question[0] + " does not have enough answer choices");
             	return;
             }
