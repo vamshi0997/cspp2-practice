@@ -26,8 +26,8 @@ class Solution {
         
         String path = "/Users/apple/cspp2-practice/m23/Assignment-1/Test/";
 		Scanner scan = new Scanner(System.in);
-		String text = scan.nextLine();
 		try {
+			String text = scan.nextLine();
 			File folder = new File("/Users/apple/cspp2-practice/m23/Assignment-1/" + text);
 			fileopen(folder, path);
 	    } 
