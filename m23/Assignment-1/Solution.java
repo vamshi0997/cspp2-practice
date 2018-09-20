@@ -31,18 +31,21 @@ class Solution {
 				System.out.println("empty directory");
 			}
 			else {
+				try {
 				File folder = new File("/Users/apple/cspp2-practice/m23/Assignment-1/" + text);
 			    fileopen(folder, path);
+			    } 
+			    catch (Exception e) {
+			    }
 			}
 	}
 		
     
     public static void fileopen(File folder, String path) {
-    	
     	String currentLine="";
 	    File[] listOfFiles = folder.listFiles();
         if (listOfFiles.length == 0) {
-        	System.out.println("empty directory");
-        }
-	}
+      
+	    }
+    }
 }
