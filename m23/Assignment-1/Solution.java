@@ -28,18 +28,11 @@ class Solution {
 		Scanner scan = new Scanner(System.in);
 		String text = scan.nextLine();
 		try {
-			if (text.equals("")) {
-				System.out.println("empty directory");
-			}
-		}
-		catch (Exception e) {
-			System.out.println("empty directory");
-		}
-		try {
 			File folder = new File("/Users/apple/cspp2-practice/m23/Assignment-1/" + text);
 			fileopen(folder, path);
 	    } 
 	    catch (Exception e) {
+	    	System.out.println("empty directory");
 	    }
 	}
 		
