@@ -38,8 +38,7 @@ class Task {
         }
     }
     public String toString() {
-        System.out.println(title + " " + assignedTo + " " + timeToComplete + " " + getImportant() + " " + getUrgent() + " " + status);
-        return "hi";
+        return title + " " + assignedTo + " " + timeToComplete + " " + getImportant() + " " + getUrgent() + " " + status;
      }
 }
 
