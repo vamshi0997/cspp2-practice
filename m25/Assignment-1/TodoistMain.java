@@ -25,9 +25,9 @@ class Task {
 
     String getImportant() {
         if (this.important == true) {
-            return "important";
+            return "Important";
         }
-        return "Not important";
+        return "Not Important";
     }
 
     String getUrgent() {
