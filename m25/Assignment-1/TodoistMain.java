@@ -38,7 +38,7 @@ class Task {
         }
     }
     public String toString() {
-        return title + " " + assignedTo + " " + timeToComplete + " " + getImportant() + " " + getUrgent() + " " + status;
+        return title + ", " + assignedTo + ", " + timeToComplete + ", " + getImportant() + ", " + getUrgent() + ", " + status;
      }
 }
 
