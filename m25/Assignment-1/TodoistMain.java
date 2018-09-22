@@ -24,6 +24,13 @@ class Todoist {
         }
         taskarray[size++] = task;
     }
+    public int totalTime4Completion() {
+        int sum = 0;
+        for (Task i: taskarray) {
+            sum += i.getTime();
+        }
+        return sum;
+    }
     public String toString() {
         String s = "";
         for (Task i: taskarray) {
@@ -72,6 +79,9 @@ class Task {
         } else {
             return "Not Urgent";
         }
+    }
+    public int getTime() {
+        return this.timeToComplete;
     }
     public String toString() {
         return title + ", " + assignedTo + ", " + timeToComplete + ", " + getImportant() + ", " + getUrgent() + ", " + status;
