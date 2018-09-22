@@ -31,12 +31,12 @@ class Todoist {
         }
         return sum;
     }
-    // public String toString() {
-    //     String s = "";
-    //     for (Task i: taskarray) {
-    //     }
-    //     return s;
-    // }
+    public String toString() {
+        String s = "";
+        for (Task i: taskarray) {
+        }
+        return s;
+    }
 }
 class Task {
     String title;
@@ -111,9 +111,9 @@ public class TodoistMain {
                 case "add-task":
                      testAddTask(todo, tokens);
                 break;
-                // case "print-todoist":
-                //     System.out.println(todo);
-                // break;
+                case "print-todoist":
+                    System.out.println(todo);
+                break;
                 // case "get-next":
                 //     System.out.println(todo.getNextTask(tokens[1]));
                 // break;
