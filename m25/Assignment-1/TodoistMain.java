@@ -3,12 +3,13 @@ import java.util.Arrays;
 import java.util.ArrayList;
 
 /**
-  * write your code below this comment
+  * write your code below this comment.
   */
 class Todoist {
-    ArrayList<Task> task1 = new ArrayList<Task>(); 
-    Task[] taskarray;
-    int size;
+    /**
+     * array list.
+     */
+    private ArrayList<Task> task1 = new ArrayList<Task>();
     /**
      * @deafault constructor.
      */
@@ -28,7 +29,7 @@ class Todoist {
      */
     public Task getNextTask(final String name) {
         for (Task i: task1) {
-            if(i.getName().equals(name)) {
+            if (i.getName().equals(name)) {
                 if (i.getStatus().equals("todo") && i.getImportant().equals("Important") && i.getUrgent().equals("Not Urgent")) {
                     return i;
                 }
@@ -45,9 +46,9 @@ class Todoist {
         Task[] ntask = new Task[count];
         int j = 0;
         for (Task i: task1) {
-            if(i.getName().equals(name)) {
+            if( i.getName().equals(name)) {
                 if (i.getStatus().equals("todo") && i.getImportant().equals("Important") && i.getUrgent().equals("Not Urgent")) {
-                    if(j < count) {
+                    if (j < count) {
                         ntask[j] = i;
                         j++;
                     }
@@ -73,7 +74,7 @@ class Todoist {
      */
     public String toString() {
         String s = "";
-        for(Task i: task1) {
+        for (Task i: task1) {
             System.out.println(i);
         }
         return s;
@@ -84,12 +85,12 @@ class Todoist {
  * task class. 
  */
 class Task {
-    String title;
-    String assignedTo;
-    int timeToComplete;
-    boolean important;
-    boolean urgent;
-    String status;
+    private String title;
+    private String assignedTo;
+    private int timeToComplete;
+    private boolean important;
+    private boolean urgent;
+    private String status;
     /**
      * @defaul constructor.
      */
