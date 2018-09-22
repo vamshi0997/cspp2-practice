@@ -15,7 +15,7 @@ class Task {
     boolean urgent;
     String status;
     Task(String title1, String assignedTo1, int timeToComplete1, boolean important1, boolean urgent1, String status1) throws Exception {
-        if (title1 == null) {
+        if (title1.equals(null)) {
             throw new Exception("Title not provided");
         } else {
             this.title = title1;
