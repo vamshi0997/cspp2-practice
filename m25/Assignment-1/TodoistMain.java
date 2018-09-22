@@ -48,7 +48,7 @@ class Todoist {
         Task[] ntask = new Task[count];
         int j = 0;
         for (Task i: task1) {
-            if( i.getName().equals(name)) {
+            if ( i.getName().equals(name)) {
                 if (i.getStatus().equals("todo")
                     && i.getImportant().equals("Important")
                     && i.getUrgent().equals("Not Urgent")) {
@@ -86,19 +86,45 @@ class Todoist {
 }
 
 /**
- * task class. 
+ * task class.
  */
 class Task {
+    /**
+     * private title.
+     */
     private String title;
+    /**
+     * private assign.
+     */
     private String assignedTo;
+    /**
+     * private time.
+     */
     private int timeToComplete;
+    /**
+     * private important.
+     */
     private boolean important;
+    /**
+     * private urgent.
+     */
     private boolean urgent;
+    /**
+     * private status.
+     */
     private String status;
     /**
-     * @defaul constructor.
+     * @param title1 title.
+     * @param assignedTo1 assign.
+     * @param timeToComplete1 time
+     * @param important1 important
+     * @param urgent1 urgent
+     * @param status1 status
+     * @throws Exception.
      */
-    Task(String title1, String assignedTo1, int timeToComplete1, boolean important1, boolean urgent1, String status1) throws Exception {
+    Task(final String title1, final String assignedTo1,
+        final int timeToComplete1, final boolean important1,
+        final boolean urgent1, final String status1) throws Exception {
         if (title1.equals("")) {
             throw new Exception("Title not provided");
         } else {
@@ -167,7 +193,7 @@ class Task {
 /**
  * Class for todoist main.
  */
-public class TodoistMain {
+public final class TodoistMain {
     /**
      * @default.
      */
