@@ -27,7 +27,6 @@ class Todoist {
     public String toString() {
         String s = "";
         for (Task i: taskarray) {
-            System.out.println(i);
         }
         return s;
     }
