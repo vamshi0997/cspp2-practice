@@ -32,7 +32,7 @@ class Todoist {
     public Task getNextTask(String name) {
         for (Task i: task1) {
             if(i.getName().equals(name)) {
-                if (i.getStatus().equals("todo") && i.getImportant().equals("Important")) {
+                if (i.getStatus().equals("todo") && i.getImportant().equals("Important") && i.getUrgent().equals("Not Urgent")) {
                     return i;
                 }
             }
