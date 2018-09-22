@@ -46,7 +46,8 @@ class Todoist {
             if(i.getName().equals(name)) {
                 if (i.getStatus().equals("todo") && i.getImportant().equals("Important") && i.getUrgent().equals("Not Urgent")) {
                     if(j < count) {
-                        ntask[j++] = i;
+                        ntask[j] = i;
+                        j++;
                     }
                 }
             }
