@@ -1,11 +1,36 @@
 import java.util.Scanner;
 import java.util.Arrays;
+import java.util.ArrayList;
 
 /**
   * write your code below this comment
   */
 class Todoist {
-
+    Task[] taskarray;
+    int size;
+    Todoist() {
+        taskarray = new Task[10];
+        size = 0;
+    }
+    private void resize() {
+        taskarray = Arrays.copyOf(taskarray, 2 * taskarray.length);
+    }
+    public int size() {
+        return size;
+    }
+    public void addTask(Task task) {
+        if(size == taskarray.length) {
+            resize();
+        }
+        taskarray[size++] = task;
+    }
+    public String toString() {
+        String s = "";
+        for (Task i: taskarray) {
+            s += i.toString() + "\n";
+        }
+        return s;
+    }
 }
 class Task {
     String title;
@@ -74,12 +99,9 @@ public class TodoistMain {
                 } catch(Exception e) {
                     System.out.println(e);
                 }
-                // case "task":
-                //     testTask(tokens);
-                // break;
-                // case "add-task":
-                //     testAddTask(todo, tokens);
-                // break;
+                case "add-task":
+                     testAddTask(todo, tokens);
+                break;
                 // case "print-todoist":
                 //     System.out.println(todo);
                 // break;
@@ -106,13 +128,13 @@ public class TodoistMain {
      * @param      todo    The todo
      * @param      tokens  The tokens
      */
-    // public static void testAddTask(final Todoist todo, final String[] tokens) {
-    //     try {
-    //         todo.addTask(createTask(tokens));
-    //     } catch (Exception e) {
-    //         System.out.println(e.getMessage());
-    //     }
-    // }
+    public static void testAddTask(final Todoist todo, final String[] tokens) {
+        try {
+            todo.addTask(createTask(tokens));
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+    }
 
     /**
      * method to test the creation of task object.
