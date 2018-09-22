@@ -9,27 +9,24 @@ class Todoist {
     ArrayList<Task> task1 = new ArrayList<Task>(); 
     Task[] taskarray;
     int size;
+    /**
+     * @deafault constructor.
+     */
     Todoist() {
         // taskarray = new Task[10];
         // size = 0;
     }
-    // private void resize() {
-    //     taskarray = Arrays.copyOf(taskarray, 2 * taskarray.length);
-    // }
-    // public int size() {
-    //     return size;
-    // }
-    public void addTask(Task task) {
-        // if(size == taskarray.length) {
-        //     resize();
-        // }
-        // taskarray[size++] = task;
+    /**
+     * @param task task.
+     */
+    public void addTask(final Task task) {
         task1.add(task);
-        // for(Task i: task1) {
-        //     System.out.println(i);
-        // }
     }
-    public Task getNextTask(String name) {
+    /**
+     * @param name name.
+     * @return task.
+     */
+    public Task getNextTask(final String name) {
         for (Task i: task1) {
             if(i.getName().equals(name)) {
                 if (i.getStatus().equals("todo") && i.getImportant().equals("Important") && i.getUrgent().equals("Not Urgent")) {
@@ -39,7 +36,12 @@ class Todoist {
         }
         return null;
     }
-    public Task[] getNextTask(String name, int count) {
+    /**
+     * @param name name.
+     * @param count count.
+     * @return task[]
+     */
+    public Task[] getNextTask(final String name, final int count) {
         Task[] ntask = new Task[count];
         int j = 0;
         for (Task i: task1) {
@@ -54,6 +56,9 @@ class Todoist {
         }
         return ntask;
     }
+    /**
+     * @return int.
+     */
     public int totalTime4Completion() {
         int sum = 0;
         for (Task i: task1) {
@@ -63,6 +68,9 @@ class Todoist {
         }
         return sum;
     }
+    /**
+     * @return string.
+     */
     public String toString() {
         String s = "";
         for(Task i: task1) {
@@ -71,6 +79,10 @@ class Todoist {
         return s;
     }
 }
+
+/**
+ * task class. 
+ */
 class Task {
     String title;
     String assignedTo;
@@ -78,6 +90,9 @@ class Task {
     boolean important;
     boolean urgent;
     String status;
+    /**
+     * @defaul constructor.
+     */
     Task(String title1, String assignedTo1, int timeToComplete1, boolean important1, boolean urgent1, String status1) throws Exception {
         if (title1.equals("")) {
             throw new Exception("Title not provided");
@@ -98,30 +113,46 @@ class Task {
         this.important = important1;
         this.urgent = urgent1;
     }
-
-    String getImportant() {
+    /**
+     * @return string.
+     */
+    public String getImportant() {
         if (this.important == true) {
             return "Important";
         }
         return "Not Important";
     }
-    String getName() {
+    /**
+     * @return string.
+     */
+    public String getName() {
         return this.assignedTo;
     }
-    String getStatus() {
+    /**
+     * @return String.
+     */
+    public String getStatus() {
         return this.status;
     }
-
-    String getUrgent() {
+    /**
+     * @return String.
+     */
+    public String getUrgent() {
         if (this.urgent == true) {
             return "Urgent";
         } else {
             return "Not Urgent";
         }
     }
+    /**
+     * @return int.
+     */
     public int getTime() {
         return this.timeToComplete;
     }
+    /**
+     * @return string.
+     */
     public String toString() {
         return title + ", " + assignedTo + ", " + timeToComplete + ", " + getImportant() + ", " + getUrgent() + ", " + status;
      }
