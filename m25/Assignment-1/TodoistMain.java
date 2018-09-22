@@ -31,7 +31,7 @@ class Todoist {
     }
     public int totalTime4Completion() {
         int sum = 0;
-        for (Task i: taskarray) {
+        for (Task i: task1) {
             sum += i.getTime();
         }
         return sum;
