@@ -145,9 +145,8 @@ class Task {
     public String getUrgent() {
         if (this.urgent == true) {
             return "Urgent";
-        } else {
-            return "Not Urgent";
         }
+        return "Not Urgent";
     }
     /**
      * @return int.
@@ -159,7 +158,9 @@ class Task {
      * @return string.
      */
     public String toString() {
-        return title + ", " + assignedTo + ", " + timeToComplete + ", " + getImportant() + ", " + getUrgent() + ", " + status;
+        return title + ", " + assignedTo + ", "
+        + timeToComplete + ", " + getImportant()
+        + ", " + getUrgent() + ", " + status;
      }
 }
 
@@ -167,6 +168,12 @@ class Task {
  * Class for todoist main.
  */
 public class TodoistMain {
+    /**
+     * @default.
+     */
+    private TodoistMain() {
+
+    }
 
     /**
      * Starts a test.
