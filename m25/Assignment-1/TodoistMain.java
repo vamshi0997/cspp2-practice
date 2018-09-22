@@ -48,7 +48,7 @@ class Todoist {
         Task[] ntask = new Task[count];
         int j = 0;
         for (Task i: task1) {
-            if ( i.getName().equals(name)) {
+            if (i.getName().equals(name)) {
                 if (i.getStatus().equals("todo")
                     && i.getImportant().equals("Important")
                     && i.getUrgent().equals("Not Urgent")) {
@@ -120,7 +120,7 @@ class Task {
      * @param important1 important
      * @param urgent1 urgent
      * @param status1 status
-     * @throws Exception.
+     * @throws Exception exception.
      */
     Task(final String title1, final String assignedTo1,
         final int timeToComplete1, final boolean important1,
@@ -148,7 +148,7 @@ class Task {
      * @return string.
      */
     public String getImportant() {
-        if (this.important == true) {
+        if (this.important) {
             return "Important";
         }
         return "Not Important";
@@ -169,7 +169,7 @@ class Task {
      * @return String.
      */
     public String getUrgent() {
-        if (this.urgent == true) {
+        if (this.urgent) {
             return "Urgent";
         }
         return "Not Urgent";
