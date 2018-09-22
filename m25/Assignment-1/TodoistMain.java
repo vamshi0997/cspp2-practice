@@ -108,6 +108,7 @@ public class TodoistMain {
                 } catch(Exception e) {
                     System.out.println(e);
                 }
+                break;
                 case "add-task":
                      testAddTask(todo, tokens);
                 break;
