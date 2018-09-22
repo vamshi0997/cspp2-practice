@@ -52,7 +52,7 @@ class Todoist {
                 }
             }
         }
-        return null;
+        return ntask;
     }
     public int totalTime4Completion() {
         int sum = 0;
