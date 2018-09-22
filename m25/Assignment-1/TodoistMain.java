@@ -6,11 +6,12 @@ import java.util.ArrayList;
   * write your code below this comment
   */
 class Todoist {
+    ArrayList<Task> task1 = new ArrayList<Task>(); 
     Task[] taskarray;
     int size;
     Todoist() {
-        taskarray = new Task[10];
-        size = 0;
+        // taskarray = new Task[10];
+        // size = 0;
     }
     private void resize() {
         taskarray = Arrays.copyOf(taskarray, 2 * taskarray.length);
@@ -19,10 +20,14 @@ class Todoist {
         return size;
     }
     public void addTask(Task task) {
-        if(size == taskarray.length) {
-            resize();
-        }
-        taskarray[size++] = task;
+        // if(size == taskarray.length) {
+        //     resize();
+        // }
+        // taskarray[size++] = task;
+        task1.add(task);
+        // for(Task i: task1) {
+        //     System.out.println(i);
+        // }
     }
     public int totalTime4Completion() {
         int sum = 0;
@@ -33,7 +38,8 @@ class Todoist {
     }
     public String toString() {
         String s = "";
-        for (Task i: taskarray) {
+        for(Task i: task1) {
+            System.out.println(i);
         }
         return s;
     }
