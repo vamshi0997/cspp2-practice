@@ -13,12 +13,12 @@ class Todoist {
         // taskarray = new Task[10];
         // size = 0;
     }
-    private void resize() {
-        taskarray = Arrays.copyOf(taskarray, 2 * taskarray.length);
-    }
-    public int size() {
-        return size;
-    }
+    // private void resize() {
+    //     taskarray = Arrays.copyOf(taskarray, 2 * taskarray.length);
+    // }
+    // public int size() {
+    //     return size;
+    // }
     public void addTask(Task task) {
         // if(size == taskarray.length) {
         //     resize();
@@ -28,6 +28,16 @@ class Todoist {
         // for(Task i: task1) {
         //     System.out.println(i);
         // }
+    }
+    public Task getNextTask(String name) {
+        for (Task i: task1) {
+            if(i.getName().equals(name)) {
+                if (i.getStatus().equals("todo") && i.getImportant().equals("Important")) {
+                    return i;
+                }
+            }
+        }
+        return null;
     }
     public int totalTime4Completion() {
         int sum = 0;
@@ -78,6 +88,12 @@ class Task {
         }
         return "Not Important";
     }
+    String getName() {
+        return this.assignedTo;
+    }
+    String getStatus() {
+        return this.status;
+    }
 
     String getUrgent() {
         if (this.urgent == true) {
@@ -121,9 +137,9 @@ public class TodoistMain {
                 case "print-todoist":
                     System.out.println(todo);
                 break;
-                // case "get-next":
-                //     System.out.println(todo.getNextTask(tokens[1]));
-                // break;
+                case "get-next":
+                    System.out.println(todo.getNextTask(tokens[1]));
+                break;
                 // case "get-next-n":
                 //     int n = Integer.parseInt(tokens[2]);
                 //     Task[] tasks = todo.getNextTask(tokens[1], n);
