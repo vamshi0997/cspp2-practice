@@ -16,19 +16,19 @@ class Task {
     String status;
     Task(String title1, String assignedTo1, int timeToComplete1, boolean important1, boolean urgent1, String status1) throws Exception {
         if (title1 == null) {
-            throw new Exception("no title");
+            throw new Exception("Title not provided");
         } else {
             this.title = title1;
         }
         if (timeToComplete1 < 0) {
-            throw new Exception("no time");
+            throw new Exception("Invalid timeToComplete -1");
         } else {
             this.timeToComplete = timeToComplete1;
         }
         if (status1.equals("todo") || status1.equals("done")) {
             this.status = status1;
         } else {
-            throw new Exception("no status");
+            throw new Exception("Invalid status dud");
         }
         this.assignedTo = assignedTo1;
         this.important = important1;
