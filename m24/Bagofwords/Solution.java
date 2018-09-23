@@ -74,11 +74,12 @@ class Bag {
 class Solution {
 
     public static void main(String[] args) {
-        String path = "/Users/apple/cspp2-practice/m23/Assignment-1/Test/";
+        //String path = "/Users/apple/cspp2-practice/m24/Bagofwords/" + str;
 		Scanner scan = new Scanner(System.in);
 		while (scan.hasNext()) {
 			String str = scan.nextLine();
-			File folder = new File("/Users/apple/cspp2-practice/m23/Assignment-1/" + str);
+			File folder = new File("/Users/apple/cspp2-practice/m24/Bagofwords/" + str);
+			String path = "/Users/apple/cspp2-practice/m24/Bagofwords/" + str + "/";
 			fileopen(folder, path);
 		}
 	}
