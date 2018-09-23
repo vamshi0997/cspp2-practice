@@ -121,7 +121,7 @@ class Solution {
                 }
                 flag1 = 1;
 	        }
-	        System.out.println("\n");
+	        System.out.println("");
 	    } catch (Exception e) {
 
 	    }
@@ -146,7 +146,7 @@ class Solution {
 	    		System.out.print(" " + "\t\t");
 	    		flag = 1;
 	    	}
-	    	System.out.println("\n");
+	    	System.out.println("");
 	    }
 	    return;
 	}
