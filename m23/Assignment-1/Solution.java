@@ -24,15 +24,12 @@ class Bag {
 		
 		int size = 0;
 		for (String i : text1) {
-			both[size++] = i;
-			
+			both[size++] = i;	
 		}
 		
 		for (String i : text2) {
-			both[size++] = i;
-			
-		}
-		
+			both[size++] = i;	
+		}	
 	}
 	
 	int count(String[] doc, String word) {
@@ -44,9 +41,6 @@ class Bag {
 		}
 		return count;
 	}
-	
-	
-	
 	
 	HashMap<String, Integer> computedoc(String[] text1, String[] text2) {
 		HashMap<String, Integer> map = new HashMap<String, Integer>(); 
@@ -60,13 +54,10 @@ class Bag {
 	}
 	
 	double euclidean(HashMap<String, Integer> map) {
-		
 		double denom = 0;
-		
 		for (int i : map.values()) {
 			denom += Math.pow(i, 2);
 		}
-		
 		return Math.sqrt(denom);
 	}
 	
@@ -77,7 +68,6 @@ class Bag {
 		for (String key : seq1.keySet()) {
 			num += seq1.get(key) * seq2.get(key);
 		}
-		
 		return num;
 	}
 	
@@ -85,52 +75,14 @@ class Bag {
 	double Frequency() {
 		HashMap<String, Integer> s1 = computedoc(this.textdoc1, this.both);
 		HashMap<String, Integer> s2 = computedoc(this.textdoc2, this.both);
-		
 		return 	dot(s1,s2) / (euclidean(s1) * euclidean(s2));
 	}
 }
-	
 
-	
-
-class Matching {
-    String[] doc1;
-	String[] doc2;
-	
-	
-	Matching(String[] textdoc1, String[] textdoc2) {
-		this.doc1 = textdoc1;
-		this.doc2 = textdoc2;
-	}
-	
-	double compute() {
-		
-		double lcs = 0;
-        int count = 0;
-		for (String i : this.doc1) {
-			Pattern p = Pattern.compile(i,Pattern.CASE_INSENSITIVE);
-			Matcher m = p.matcher(Arrays.toString(this.doc2).replace("[","").replace("]","").replace(",",""));
-			
-			while (m.find()) {
-                count++;
-				if (lcs < i.length()){
-                    lcs = i.length();
-                }
-			}
-			
-		}
-
-		double length = Arrays.toString(this.doc1).replace("[","").replace("]","").replace(",","").length() +
-						Arrays.toString(this.doc2).replace("[","").replace("]","").replace(",","").length();
-		
-		return lcs * count * 100 / length;
-	}
-}
 
 class Solution {
     
-    public static void main(String[] args) {
-        
+    public static void main(String[] args) { 
         String path = "/Users/apple/cspp2-practice/m23/Assignment-1/Test/";
 		Scanner scan = new Scanner(System.in);
 		while (scan.hasNext()) {
@@ -147,25 +99,54 @@ class Solution {
            return;
 	     }
 	    String[] text = new String[listOfFiles.length];
-	    int i = 0;
+	    String[] text1 = new String[listOfFiles.length];
+ 	    int i = 0, l = 0;
 	    try {
 	        for (File f: listOfFiles) {
-	        	String p = path + f.getName();
-                text[i++] = new String(Files.readAllBytes(Paths.get(p)));
+	        	text1[l++] = f.getName(); 
 	        }
 	    } catch (Exception e) {
 
 	    }
+	    Arrays.sort(text1);
+	    int flag1 = 0;
+	    try {
+	        for (String f: text1) {
+	        	String p = path + f; 
+                text[i++] = new String(Files.readAllBytes(Paths.get(p)));
+                if (flag1 == 0) {
+                	System.out.print("\t\t" + f + "\t");
+                } else {
+                	System.out.print(f + "\t");
+                }
+                flag1 = 1;
+	        }
+	        System.out.println("\n");
+	    } catch (Exception e) {
+
+	    }
+	    int count = 0;
 	    for (String j: text) {
+	    	int flag = 0;
 	    	String[] str1 = j.split(" ");
 	    	for (String k: text) {
 	    		String[] str2 = k.split(" ");
 	    		Bag b = new Bag(str1, str2);
 	    		double result = b.Frequency();
-	    		System.out.print(Math.round(result * 100));
-	    		System.out.print(" " + "\t");
+	    		if (flag == 0) {
+	    	    for (int m = 0; m < text1.length; m++) {
+	    	    	if (count == m) {
+	    	    		System.out.print(text1[m] + "\t");
+	    	    		count += 1;
+	    	    		break;
+	    	    	}    
+	    	    }
 	    	}
-	    	System.out.println();
+	    		System.out.print(Math.round(result * 100));
+	    		System.out.print(" " + "\t\t");
+	    		flag = 1;
+	    	}
+	    	System.out.println("\n");
 	    }
 	    return;
 	}
